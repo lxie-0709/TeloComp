@@ -1,2 +1,2 @@
-# Telocomp
+# TeloComp
 Telomere compliment tools
