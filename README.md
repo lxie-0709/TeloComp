@@ -10,7 +10,7 @@ TeloComp is an executable file written in Python that users can run directly, bu
 
 # Dependencies
 
-1. Flye
+1.Flye
 
 You can download it [here](https://github.com/fenderglass/Flye/archive/refs/tags/2.9.3.tar.gz). We use Flye version 2.9.3, you can use       this version or higher.
 
