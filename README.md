@@ -20,7 +20,7 @@ You can download it [here](https://github.com/fenderglass/Flye/archive/refs/tags
     #测试
     $ flye -h
 
-2.NextPolish and Racon
+2.Polish
 
 (1) NextPolish 
 
@@ -28,7 +28,7 @@ You can download it [here](https://github.com/Nextomics/NextPolish/releases/down
 
     $ tar -zxvf NextPolish.tgztar
     $ cd NextPolish &&make-j 10
-    $export PATH=$PATH:/pub4/huangshoubian1/NextPolis
+    $export PATH=$PATH:/yourpath/NextPolis
 
 (2) Racon
 
@@ -39,7 +39,21 @@ You can download it [here](https://github.com/isovic/racon/archive/refs/tags/1.4
     $ conda install cmake 
     $ cmake -DCMAKE_BUILD_TYPE=Release..
     $ make&&make install
-    $ export PATH=$PATH:/pub4/huangshoushoubian1/racon/bin #写入环境变量
+    $ export PATH=$PATH:/yourpath/racon/bin #写入环境变量
     #测试
     $ racon -h 
     $ racon --version 
+
+(3) bwa
+
+You can download it [here](https://github.com/lh3/bwa/releases/download/v0.7.17/bwa-0.7.17.tar.bz2). We use bwa version 0.7.17, you can use this version or higher.
+
+    $ tar jxf bwa-0.7.12.tar.bz2
+    $ cd bwa-0.7.12
+    $ make
+    $ echo 'PATH=$PATH:/your/bwa/path' >> ~/.bashrc
+    $ source ~/.bashrc
+
+3.GenomeSyn
+
+
