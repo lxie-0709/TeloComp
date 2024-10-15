@@ -21,7 +21,7 @@ The above software can be installed using conda(install_conda.sh) or by download
 ## Building on Linux
 Use the following script to build this software：
 
-#### &emsp;1.First, get the source code。
+#### &emsp;1.First, get the source code.
 
     git clone git@github.com:lxie-0709/TeloComp.git
     cd TeloComp
