@@ -5,22 +5,7 @@ TeloComp is an efficient integrated software package for telomere extraction and
 
 # Install
 TeloComp is an executable file written in Python that users can run directly, but before using TeloComp, you need to install all the dependencies of the software. 
-## Building on Linux
-Use the following script to build this software：
-
- ### 1.First, get the source code
-
-    git clone git@github.com:lxie-0709/TeloComp.git
-    cd TeloComp
-
- ### 2.
-
- ### 3.
-
- ### 4.
-
-
-# Dependencies
+## Dependencies
 Please note that you must install the following versions of dependent software or higher before running:
 
 * samtools-1.18
@@ -35,8 +20,21 @@ The above software can be installed using conda(install_conda.sh) or by download
 
 In addition,GenomeSyn cannot be installed using conda, you need to refer to its [github](https://github.com/jmsong2/GenomeSyn) tutorial for installation.
 
+## Building on Linux
+Use the following script to build this software：
 
-# Usage
+  ### 1.First, get the source code
+
+    git clone git@github.com:lxie-0709/TeloComp.git
+    cd TeloComp
+
+  ### 2.
+
+  ### 3.
+
+  ### 4.
+
+ # Usage
     
     screen -L -dmS step1_Cassava bash -c "/usr/bin/time -v python step1_Cassava20240809.py -G ../GWHDEDE00000000.genome.fasta -O ../CRR800583_ont.fq.gz -H ../CRR780166_hifi.fastq.gz -B out_ONT_Casssava.bam -b out_HiFi_Casssava.bam -r ../GWHDEDE00000000.genome.fasta.fai -c 100 -m CCCTAAA -t 50"
 
