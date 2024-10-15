@@ -21,12 +21,12 @@ The above software can be installed using conda(install_conda.sh) or by download
 ## Building on Linux
 Use the following script to build this software：
 
-&emsp; ### 1.First, get the source code。
+### &emsp;1.First, get the source code。
 
     git clone git@github.com:lxie-0709/TeloComp.git
     cd TeloComp
 
-&emsp; ### 2.Next, configure the software and add the current working directory to the system environment variables to make it globally accessible.
+### &emsp;2.Next, configure the software and add the current working directory to the system environment variables to make it globally accessible.
 
     chmod +x step1_Cassava20240809.py step2_Cassava20240819.py step3_Vigna_20240822.py step4_genomeSyn_20240830_color.py
     echo "alias telocomp_s1='python \"$(pwd)/bin/step1_Cassava20240809.py\"'" >> ~/.bashrc
@@ -36,7 +36,7 @@ Use the following script to build this software：
     sh install.sh
     source ~/.bashrc
 
-&emsp; ### 3.Finally, verify that it is installed correctly and can be executed by the following command：
+### &emsp;3.Finally, verify that it is installed correctly and can be executed by the following command：
     
     telocomp_s1 -h
     telocomp_s2 -h
