@@ -11,12 +11,12 @@ TeloComp is an executable file written in Python that users can run directly, bu
 # Dependencies
 Please note that you must install the following versions of dependent software or higher before running:
 
-    * samtools-1.18
-    * minimap2-2.27
-    * bwa-0.7.12
-    * Flye-2.9.3
-    * racon-v1.4.3
-    * NextPolish-v1.4.1
+* samtools-1.18
+* minimap2-2.27
+* bwa-0.7.12
+* Flye-2.9.3
+* racon-v1.4.3
+* NextPolish-v1.4.1
     
 The above software can be installed using conda(install_conda.sh) or by downloading the software source code from github(install.sh)
 
