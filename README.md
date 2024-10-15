@@ -16,6 +16,7 @@ Please note that you must install the following versions of dependent software o
     * Flye-2.9.3
     * racon-v1.4.3
     * NextPolish-v1.4.1
+    
 The above software can be installed using conda(install_conda.sh) or by downloading the software source code from github(install.sh)
 
 3.GenomeSyn
