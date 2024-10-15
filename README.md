@@ -17,14 +17,14 @@ Please note that you must install the following versions of dependent software o
 * Flye-2.9.3
 * racon-v1.4.3
 * NextPolish-v1.4.1
+* GenomeSyn-1.2.7
     
 The above software can be installed using conda(install_conda.sh) or by downloading the software source code from github(install.sh)
 
-# GenomeSyn
-GenomeSyn cannot be installed using conda, you need to refer to its [github](https://github.com/jmsong2/GenomeSyn) tutorial for installation.
+In addition,GenomeSyn cannot be installed using conda, you need to refer to its [github](https://github.com/jmsong2/GenomeSyn) tutorial for installation.
 
 
-#Usage
+# Usage
     
     screen -L -dmS step1_Cassava bash -c "/usr/bin/time -v python step1_Cassava20240809.py -G ../GWHDEDE00000000.genome.fasta -O ../CRR800583_ont.fq.gz -H ../CRR780166_hifi.fastq.gz -B out_ONT_Casssava.bam -b out_HiFi_Casssava.bam -r ../GWHDEDE00000000.genome.fasta.fai -c 100 -m CCCTAAA -t 50"
 
