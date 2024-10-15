@@ -7,16 +7,17 @@ TeloComp is an efficient integrated software package for telomere extraction and
 TeloComp is an executable file written in Python that users can run directly, but before using TeloComp, you need to install all the dependencies of the software. 
 ## Building on Linux
 Use the following script to build this software：
-### 1.First, get the source code
+
+    ### 1.First, get the source code
 
     git clone git@github.com:lxie-0709/TeloComp.git
     cd TeloComp
 
-### 2.
+    ### 2.
 
-### 3.
+    ### 3.
 
-### 4.
+    ### 4.
 
 
 # Dependencies
