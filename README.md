@@ -19,7 +19,7 @@ Please note that you must install the following versions of dependent software o
 The above software can be installed using conda(install_conda.sh) or by downloading the software source code from github(install.sh)
 
 3.GenomeSyn
-GenomeSyn cannot be installed using conda, you need to refer to its ![github(https://github.com/jmsong2/GenomeSyn) tutorial for installation.
+GenomeSyn cannot be installed using conda, you need to refer to its ![github](https://github.com/jmsong2/GenomeSyn) tutorial for installation.
 
 
 #Usage
