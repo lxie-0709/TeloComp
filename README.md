@@ -16,7 +16,8 @@ Please note that you must install the following versions of dependent software o
 * NextPolish-v1.4.1
 * GenomeSyn-1.2.7
     
-The above software can be installed using conda(install_conda.sh) or by downloading the software source code from github(install.sh)
+The above software can be installed using conda, or you can download the software source code from github and run install.sh to install it.
+In addition, GenomeSyn needs to check its [github](https://github.com/JM-SONG/GenomeSyn) and install it according to the software introduction.
 
 ## Building on Linux
 Use the following script to build this software：
