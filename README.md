@@ -25,6 +25,7 @@ Use the following script to build this software：
 #### &emsp;1.First, get the source code.
 
     git clone git@github.com:lxie-0709/TeloComp.git
+    
     cd TeloComp
 
 #### &emsp;2.Next, configure the software and add the current working directory to the system environment variables to make it globally accessible.
