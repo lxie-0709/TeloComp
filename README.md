@@ -8,8 +8,8 @@ TeloComp is an executable file written in Python that users can run directly, bu
 ## Dependencies
 Please note that you must install the following versions of dependent software or higher before running:
 
-* samtools-1.18
-* minimap2-2.27
+* [samtools-1.18](https://github.com/lxie-0709/TeloComp/blob/main/Dependencies/Flye-2.9.4.tar.gz)
+* [minimap2-2.27](https://github.com/lxie-0709/TeloComp/blob/main/Dependencies/Flye-2.9.4.tar.gz)
 * bwa-0.7.12
 * Flye-2.9.3
 * racon-v1.4.3
