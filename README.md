@@ -46,8 +46,11 @@ Use the following script to build this software：
 #### &emsp;3.Finally, verify that it is installed correctly and can be executed by the following command：
     
     Filter -h
+    
     Assembly -h
+    
     Telo_complement -h
+    
     Syn -h
 
 # Usage
