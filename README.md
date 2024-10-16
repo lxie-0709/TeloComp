@@ -30,23 +30,26 @@ Use the following script to build this software：
 #### &emsp;2.Next, configure the software and add the current working directory to the system environment variables to make it globally accessible.
 
     chmod +x step1_Cassava20240809.py step2_Cassava20240819.py step3_Vigna_20240822.py step4_genomeSyn_20240830_color.py
-    echo "alias telocomp_s1='python \"$(pwd)/bin/step1_Cassava20240809.py\"'" >> ~/.bashrc
-    echo "alias telocomp_s2='python \"$(pwd)/bin/step2_Cassava20240819.py\"'" >> ~/.bashrc
-    echo "alias telocomp_s3='python \"$(pwd)/bin/step3_Vigna_20240822.py\"'" >> ~/.bashrc
-    echo "alias telocomp_s4='python \"$(pwd)/bin/step4_genomeSyn_20240830_color.py\"'" >> ~/.bashrc
+    echo "alias Filter='python \"$(pwd)/bin/step1_Cassava20240809.py\"'" >> ~/.bashrc
+    echo "alias Assembly='python \"$(pwd)/bin/step2_Cassava20240819.py\"'" >> ~/.bashrc
+    echo "alias Telo_complement='python \"$(pwd)/bin/step3_Vigna_20240822.py\"'" >> ~/.bashrc
+    echo "alias Syn='python \"$(pwd)/bin/step4_genomeSyn_20240830_color.py\"'" >> ~/.bashrc
     sh install.sh
     source ~/.bashrc
 
 #### &emsp;3.Finally, verify that it is installed correctly and can be executed by the following command：
     
-    telocomp_s1 -h
-    telocomp_s2 -h
-    telocomp_s3 -h
-    telocomp_s4 -h
+    Filter -h
+    Assembly -h
+    Telo_complement -h
+    Syn -h
 
- # Usage
+# Usage
+### &emsp;Filter
     
     screen -L -dmS step1_Cassava bash -c "/usr/bin/time -v python step1_Cassava20240809.py -G ../GWHDEDE00000000.genome.fasta -O ../CRR800583_ont.fq.gz -H ../CRR780166_hifi.fastq.gz -B out_ONT_Casssava.bam -b out_HiFi_Casssava.bam -r ../GWHDEDE00000000.genome.fasta.fai -c 100 -m CCCTAAA -t 50"
+
+This step mainly screens out reads containing telomeres beyond the end of the genome, trims reads according to coverage, and outputs the final results to the directories `trim_L` and `trim_R` according to the direction.
 
     nohup /usr/bin/time -v python step2_Cassava20240819.py --dir_IN_L trim_L --dir_IN_R trim_R -L /pub5/Hshoub/ZH13_T2T/CRR70524_merged_hifi.fq.gz -W /pub5/Hshoub/ZH13_T2T/WGS/CRR705250_f1.fq.gz -w /pub5/Hshoub/ZH13_T2T/WGS/CRR705250_r2.fq.gz -N /pub4/huangshoubian1/NextPolish -t 50 &
 
