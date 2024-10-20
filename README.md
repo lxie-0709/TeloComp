@@ -73,11 +73,17 @@ Next,the screened and processed reads are assembled and polished, and the final 
 
 Finally，complement the assembled and polished reads to the original genome, then output the complemented genome(`new_genome.fasta`), and output the telomere position file(`telomere position`) and telomere type file(`telomere_repeats_info.txt`), and the density distribution map of telomeres at each chromosome end(stored in the folder `telomere_plots`).
 
+####  Example piture 
+
+
 ## Collinearity analysis
 
     python step4_genomeSyn_20240830_color.py -G1 GCA_028455895.1_ASM2845589v1_genomic_upseq.fna -G2 new_genome_upseq.fasta -pos ../telomere_positions.txt --length 20000 -tel_max 10 -m CCCTAAA --genomeSyn2
 
 In addition, the left and right ends of the chromosomes of the original genome and the complemented genome(`new_genome.fasta`) are extracted for collinear comparison(`genomeSyn_result`), and the number of telomeres at the corresponding chromosome ends of the two genomes is output,including `telomere.original.num.info` and `telomere.complement.num.info`.
+
+####  Collinearity result
+
 
 
 
