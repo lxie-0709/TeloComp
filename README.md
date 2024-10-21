@@ -1,6 +1,6 @@
 # TeloComp
 TeloComp is an efficient integrated software package for telomere extraction and complementation. It outputs new genome and telomere complementation information, and visualizes the complemented telomere parts with line graphs and colinearity graphs. It is more friendly to scientific researchers and is committed to more complete T2T genome assembly.
-<div align=center>
+<div align="center">
 <img src="https://github.com/lxie-0709/TeloComp/blob/main/TeloComp.png" width="688px">
 </div>
 
@@ -76,7 +76,7 @@ Finally，complement the assembled and polished reads to the original genome, th
 
 ####  Example: the following pictures show the left and right ends of chromosome 2 of Morus notabilis.
 Telomere density distribution diagram of chromosome ends with telomere complementation（The following pictures show the left and right ends of chromosome 2).
-<div align="half">
+<div align="center">
     <img src="https://github.com/lxie-0709/TeloComp/blob/main/Chr2_L_plot.png" width="388px"/>
     <img src="https://github.com/lxie-0709/TeloComp/blob/main/Chr2_R_plot.png" width="388px"/>
 </div>
