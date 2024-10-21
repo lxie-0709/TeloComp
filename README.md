@@ -83,7 +83,7 @@ Finally，complement the assembled and polished reads to the original genome, th
 In addition, the left and right ends of the chromosomes of the original genome and the complemented genome(`new_genome.fasta`) are extracted for collinear comparison(`genomeSyn_result`), and the number of telomeres at the corresponding chromosome ends of the two genomes is output,including `telomere.original.num.info` and `telomere.complement.num.info`.
 
 ####  Collinearity result
-<img src="https://github.com/lxie-0709/TeloComp/blob/main/Synteny.png" width="80px">
+<img src="https://github.com/lxie-0709/TeloComp/blob/main/Synteny.png" width="188px">
 
 
 
