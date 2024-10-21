@@ -89,7 +89,7 @@ Telomere density distribution diagram of chromosome ends with telomere complemen
 In addition, the left and right ends of the chromosomes of the original genome and the complemented genome(`new_genome.fasta`) are extracted for collinear comparison(`genomeSyn_result`), and the number of telomeres at the corresponding chromosome ends of the two genomes is output,including `telomere.original.num.info` and `telomere.complement.num.info`.
 
 ####  Collinearity result
-Collinear alignment between the original genome and the telomere-complementing genome (Only chromosomes with complementary telomeres are shown).
+Collinear alignment between the **Morus** **notabilis** original genome and the telomeric complemented genome (only chromosomes with complementary telomeres are shown).
 <div align=center>
 <img src="https://github.com/lxie-0709/TeloComp/blob/main/Synteny.png" width="588px">
 </div>
