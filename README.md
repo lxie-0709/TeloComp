@@ -73,7 +73,8 @@ Next,the screened and processed reads are assembled and polished, and the final 
 
 Finally，complement the assembled and polished reads to the original genome, then output the complemented genome(`new_genome.fasta`), and output the telomere position file(`telomere position`) and telomere type file(`telomere_repeats_info.txt`), and the density distribution map of telomeres at each chromosome end(stored in the folder `telomere_plots`).
 
-####  Example piture 
+####  Density statistics of chromosome 2 telomeres
+Telomere density distribution diagram of chromosome ends with telomere complementation.
 
 
 ## Collinearity analysis
@@ -83,6 +84,7 @@ Finally，complement the assembled and polished reads to the original genome, th
 In addition, the left and right ends of the chromosomes of the original genome and the complemented genome(`new_genome.fasta`) are extracted for collinear comparison(`genomeSyn_result`), and the number of telomeres at the corresponding chromosome ends of the two genomes is output,including `telomere.original.num.info` and `telomere.complement.num.info`.
 
 ####  Collinearity result
+Collinear alignment between the original genome and the telomere-complementing genome (only chromosomes with telomeres are shown here).
 <div align=center>
 <img src="https://github.com/lxie-0709/TeloComp/blob/main/Synteny.png" width="588px">
 </div>
