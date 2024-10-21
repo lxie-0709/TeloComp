@@ -76,6 +76,9 @@ Finally，complement the assembled and polished reads to the original genome, th
 
 ####  Density statistics of chromosome 2 telomeres
 Telomere density distribution diagram of chromosome ends with telomere complementation.
+<center class="half">
+    <img src="https://github.com/lxie-0709/TeloComp/blob/main/Chr2_L_plot.png" width="388px"/><img src="https://github.com/lxie-0709/TeloComp/blob/main/Chr2_R_plot.png" width="388px"/>
+</center>
 
 
 ## Collinearity analysis
