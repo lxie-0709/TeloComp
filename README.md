@@ -74,7 +74,7 @@ Next,the screened and processed reads are assembled and polished, and the final 
 
 Finally，complement the assembled and polished reads to the original genome, then output the complemented genome(`new_genome.fasta`), and output the telomere position file(`telomere position`) and telomere type file(`telomere_repeats_info.txt`), and the density distribution map of telomeres at each chromosome end(stored in the folder `telomere_plots`).
 
-####  Example: the following pictures show the left and right ends of chromosome 2 of Morus notabilis.
+####  Example: the following pictures show the left and right ends of chromosome 2 of **Morus notabilis**.
 Telomere density distribution diagram of chromosome ends with telomere complementation（The following pictures show the left and right ends of chromosome 2).
 <div align="center">
     <img src="https://github.com/lxie-0709/TeloComp/blob/main/Chr2_L_plot.png" width="388px"/>
@@ -89,7 +89,7 @@ Telomere density distribution diagram of chromosome ends with telomere complemen
 In addition, the left and right ends of the chromosomes of the original genome and the complemented genome(`new_genome.fasta`) are extracted for collinear comparison(`genomeSyn_result`), and the number of telomeres at the corresponding chromosome ends of the two genomes is output,including `telomere.original.num.info` and `telomere.complement.num.info`.
 
 ####  Collinearity result
-Collinear alignment between the original genome and the telomere-complementing genome (only chromosomes with telomeres are shown here).
+Collinear alignment between the original genome and the telomere-complementing genome (Only chromosomes with complementary telomeres are shown).
 <div align=center>
 <img src="https://github.com/lxie-0709/TeloComp/blob/main/Synteny.png" width="588px">
 </div>
