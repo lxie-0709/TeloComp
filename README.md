@@ -74,7 +74,7 @@ Next,the screened and processed reads are assembled and polished, and the final 
 
 Finally，complement the assembled and polished reads to the original genome, then output the complemented genome(`new_genome.fasta`), and output the telomere position file(`telomere position`) and telomere type file(`telomere_repeats_info.txt`), and the density distribution map of telomeres at each chromosome end(stored in the folder `telomere_plots`).
 
-####  Example: the following pictures show the left and right ends of chromosome 2 of **Morus** **notabilis**.
+####  Example: the following pictures show the left and right ends of chromosome 2 of __Morus__ __notabilis__.
 Telomere density distribution diagram of chromosome ends with telomere complementation（The following pictures show the left and right ends of chromosome 2).
 <div align="center">
     <img src="https://github.com/lxie-0709/TeloComp/blob/main/Chr2_L_plot.png" width="388px"/>
