@@ -57,7 +57,27 @@ Use the following script to build this software：
 
 # Usage
 ## Filter
-    
+
+#### options:
+      -h, --help        show this help message and exit
+      -G , --genome     Input genome file (FASTA format)
+      -O , --ONT        Input ONT data
+      -H , --HiFi       Input HiFi data
+      -B , --ONTbam     The output bam file. If the [--BamExtr] parameter is
+                        selected, it is the input bam file.
+      -b , --HiFibam    The output bam file. If the [--BamExtr] parameter is
+                        selected, it is the input bam file.
+      --BamExtr         Selecting this parameter does not perform genome
+                        alignment to obtain bam, but directly inputs the sorted
+                        bam file, and then screens the qualified reads.
+      -r , --ref        Index file of reference genome
+      -c , --coverage   Choose the coverage you think is appropriate, that is,
+                        the minimum length of reads
+      -m , --motif      Telomeric repeats sequences, e.g., plant:
+                        CCCTAAA(TTTAGGG), animal: TTAGGG(CCCTAA), etc.
+      -t , --threads    Number of threads to use (default: 20)
+
+#### command:
     screen -L -dmS step1_Cassava bash -c "/usr/bin/time -v python step1_Cassava20240809.py -G ../GWHDEDE00000000.genome.fasta -O ../CRR800583_ont.fq.gz -H ../CRR780166_hifi.fastq.gz -B out_ONT_Casssava.bam -b out_HiFi_Casssava.bam -r ../GWHDEDE00000000.genome.fasta.fai -c 100 -m CCCTAAA -t 50"
 
 First,this step mainly screens out reads containing telomeres beyond the end of the genome, trims reads according to coverage, and outputs the final results to the directories `trim_L` and `trim_R` according to the direction.
