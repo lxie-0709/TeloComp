@@ -56,6 +56,8 @@ Use the following script to build this software：
     Syn -h
 
 # Usage
+Note: TeloComp needs to be run in the same directory from beginning to end!
+
 ## Filter
 
 #### Options:
@@ -98,6 +100,52 @@ First,this step mainly screens out reads containing telomeres beyond the end of 
     nohup /usr/bin/time -v python step2_Cassava20240819.py --dir_IN_L trim_L --dir_IN_R trim_R -L /pub5/Hshoub/ZH13_T2T/CRR70524_merged_hifi.fq.gz -W /pub5/Hshoub/ZH13_T2T/WGS/CRR705250_f1.fq.gz -w /pub5/Hshoub/ZH13_T2T/WGS/CRR705250_r2.fq.gz -N /pub4/huangshoubian1/NextPolish -t 50 &
 
 Next,the screened and processed reads are assembled and polished, and the final results are output to the directory `fils_NP`.
+
+## Extract the longest or shortest reads
+
+If you choose to directly extract the longest or shortest reads, you can skip the assembly step and run this step directly.
+
+#### Options:
+
+      -h, --help          show this help message and exit
+      --Max_length        Extract longest reads
+      --Min_length        Extract shortest reads
+      --dir_ont           Directory containing ONT files
+      --dir_hifi          Directory containing HiFi files
+      -L , --lgsreads     Long-read sequencing data
+      -W , --wgs1         Path to WGS reads (read 1)
+      -w , --wgs2         Path to WGS reads (read 2)
+      -N , --NextPolish   Path to NextPolish tool
+      -t , --threads      Number of threads to use (default: 20)
+
+#### Run:
+##### Extract reads
+    （1）Extract the longest reads
+    nohup /usr/bin/time -v python Max_Min_Length_polish20240823.py --Min_length \
+    --dir_ont /pub5/Hshoub/Morus_notabilis/Telocomp/time_test/algn_output_ont \
+    --dir_hifi /pub5/Hshoub/Morus_notabilis/Telocomp/time_test/algn_output_hifi \
+    -L /pub5/Hshoub/Morus_notabilis/CRR778716_hifi.fastq.gz \
+    -W /pub5/Hshoub/Morus_notabilis/WGS/CRR778717_f1.fq.gz \
+    -w /pub5/Hshoub/Morus_notabilis/WGS/CRR778717_r2.fq.gz \
+    -N /pub4/huangshoubian1/NextPolish -t 50 &
+
+
+    （2）Extract the shortest reads
+    nohup /usr/bin/time -v python Max_Min_Length_polish20240823.py --Max_length \
+    --dir_ont /pub5/Hshoub/Morus_notabilis/Telocomp/time_test/algn_output_ont \
+    --dir_hifi /pub5/Hshoub/Morus_notabilis/Telocomp/time_test/algn_output_hifi \
+    -L /pub5/Hshoub/Morus_notabilis/CRR778716_hifi.fastq.gz \
+    -W /pub5/Hshoub/Morus_notabilis/WGS/CRR778717_f1.fq.gz \
+    -w /pub5/Hshoub/Morus_notabilis/WGS/CRR778717_r2.fq.gz \
+    -N /pub4/huangshoubian1/NextPolish -t 50 &
+
+Here you need to enter the untrimmed end alignment reads in the Filter, `algn_output_ont` and `algn_output_hifi` respectively, and finally output the polished reads to the directory `tmp_Min_getpos` and `tmp_Max_getpos`.
+
+##### （2）Telomere complement 
+    nohup /usr/bin/time -v python step3_Vigna_20240822.py --dir_Min -G ../../../../GWHCBIQ00000000.genome.fasta  -m CCCTAAA -M 7 &
+
+This is the same as the Telomere complement below, both of which complete the telomere part to the original genome, but the running command is different.
+
 
 ## Telomere complement
 
