@@ -178,8 +178,8 @@ Finally，complement the assembled and polished reads to the original genome, th
 ####  Example: the following pictures show the left and right ends of chromosome 2 of *Morus* *notabilis*.
 Telomere density distribution diagram of chromosome ends with telomere complementation（The following pictures show the left and right ends of chromosome 2).
 <div align="center">
-    <img src="(https://github.com/lxie0709/TeloComp/blob/main/example/chr2_L_telomere.pdf)" width="388px"/>
-    <img src="(https://github.com/lxie0709/TeloComp/blob/main/example/chr2_R_telomere.pdf)" width="388px"/>
+    <img src="https://github.com/lxie-0709/TeloComp/blob/main/Chr2_L_plot.png" width="388px"/>
+    <img src="(https://github.com/lxie-0709/TeloComp/blob/main/Chr2_R_plot.png)" width="388px"/>
 </div>
 
 
@@ -229,7 +229,7 @@ In addition, the left and right ends of the chromosomes of the original genome a
 ####  Collinearity result
 Collinear alignment between the ***Morus*** ***notabilis*** original genome and the telomeric complemented genome (only chromosomes with complementary telomeres are shown).
 <div align=center>
-<img src="https://github.com/lxie-0709/TeloComp/blob/main/example/test_Collinearity.pdf" width="588px">
+<img src="https://github.com/lxie-0709/TeloComp/blob/main/test_Collinearity.png" width="588px">
 </div>
 
 
