@@ -70,7 +70,8 @@ Note: TeloComp needs to be run in the same directory from beginning to end!
       -t , --threads    Number of threads to use (default: 20)
 
 #### Run:
-    screen -L -dmS step1_Cassava bash -c "/usr/bin/time -v python step1_Cassava20240809.py -G ../GWHDEDE00000000.genome.fasta -O ../CRR800583_ont.fq.gz -H ../CRR780166_hifi.fastq.gz -B out_ONT_Casssava.bam -b out_HiFi_Casssava.bam -r ../GWHDEDE00000000.genome.fasta.fai -c 100 -m CCCTAAA -t 50"
+    Direct input of genomic data
+    telocomp_Filter -G /PATH/test_sequence.fasta.gz -O /PATH/test_ONT.fq.gz -H /PATH/test_HiFi.fq.gz -B out_ONT.bam -b out_HiFi.bam -r /PATH/test_sequence.fasta.fai -c 100 -m CCCTAAA -t 50
 
 First,this step mainly screens out reads containing telomeres beyond the end of the genome, trims reads according to coverage, and outputs the final results to the directories `trim_L` and `trim_R` according to the direction.
 
