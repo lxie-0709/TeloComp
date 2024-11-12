@@ -30,8 +30,11 @@ To use the software, you need to follow the following steps to install it.
     cd TeloComp
 
 #### &emsp;2.Next, configure the software and add the current working directory to the system environment variables to make it globally accessible.
-    
-    sh install.sh 
+    （1）Installing Dependencies
+        sh install.sh 
+        
+    （2）Configuring TeloComp
+        sh setup.sh 
 
 #### &emsp;3.Finally, verify that it is installed correctly and can be executed by the following command：
     
