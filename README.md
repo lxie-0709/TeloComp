@@ -70,8 +70,12 @@ Note: TeloComp needs to be run in the same directory from beginning to end!
       -t , --threads    Number of threads to use (default: 20)
 
 #### Run:
-    Direct input of genomic data
+    Direct input of genomic data：
     telocomp_Filter -G /PATH/test_sequence.fasta.gz -O /PATH/test_ONT.fq.gz -H /PATH/test_HiFi.fq.gz -B out_ONT.bam -b out_HiFi.bam -r /PATH/test_sequence.fasta.fai -c 100 -m CCCTAAA -t 50
+    
+    Start by importing the bam file：
+    telocomp_Filter --BamExtr -B /PATH/test_ONT.bam -b /PATH/test_HiFi.bam -r /PATH/test_sequence.fasta.fai -c 100 -m CCCTAAA
+
 
 First,this step mainly screens out reads containing telomeres beyond the end of the genome, trims reads according to coverage, and outputs the final results to the directories `trim_L` and `trim_R` according to the direction.
 
@@ -88,7 +92,7 @@ First,this step mainly screens out reads containing telomeres beyond the end of 
       -t , --threads      Number of threads to use (default: 20)
 
 #### Run:
-    nohup /usr/bin/time -v python step2_Cassava20240819.py --dir_IN_L trim_L --dir_IN_R trim_R -L /pub5/Hshoub/ZH13_T2T/CRR70524_merged_hifi.fq.gz -W /pub5/Hshoub/ZH13_T2T/WGS/CRR705250_f1.fq.gz -w /pub5/Hshoub/ZH13_T2T/WGS/CRR705250_r2.fq.gz -N /pub4/huangshoubian1/NextPolish -t 50 &
+     telocomp_Assembly --dir_IN_L trim_L --dir_IN_R trim_R -L /PATH/test_HiFi.fq.gz -W /PATH/test_WGS_f1.fq.gz -w /PATH/test_WGS_r2.fq.gz -N /PATH/NextPolish -t 50 
 
 Next,the screened and processed reads are assembled and polished, and the final results are output to the directory `fils_NP`.
 
@@ -112,28 +116,16 @@ If you choose to directly extract the longest or shortest reads, you can skip th
 #### Run:
 ##### Extract reads
     （1）Extract the longest reads
-    nohup /usr/bin/time -v python Max_Min_Length_polish20240823.py --Min_length \
-    --dir_ont /pub5/Hshoub/Morus_notabilis/Telocomp/time_test/algn_output_ont \
-    --dir_hifi /pub5/Hshoub/Morus_notabilis/Telocomp/time_test/algn_output_hifi \
-    -L /pub5/Hshoub/Morus_notabilis/CRR778716_hifi.fastq.gz \
-    -W /pub5/Hshoub/Morus_notabilis/WGS/CRR778717_f1.fq.gz \
-    -w /pub5/Hshoub/Morus_notabilis/WGS/CRR778717_r2.fq.gz \
-    -N /pub4/huangshoubian1/NextPolish -t 50 &
+    telocomp_maxmin --Max_length --dir_ont /PATH/algn_output_ont --dir_hifi /PATH/algn_output_hifi -L /PATH/test_HiFi.fq.gz -W /PATH/test_WGS_f1.fq.gz -w /PATH/test_WGS_r2.fq.gz -N /PATH/NextPolish -t 50 
 
 
     （2）Extract the shortest reads
-    nohup /usr/bin/time -v python Max_Min_Length_polish20240823.py --Max_length \
-    --dir_ont /pub5/Hshoub/Morus_notabilis/Telocomp/time_test/algn_output_ont \
-    --dir_hifi /pub5/Hshoub/Morus_notabilis/Telocomp/time_test/algn_output_hifi \
-    -L /pub5/Hshoub/Morus_notabilis/CRR778716_hifi.fastq.gz \
-    -W /pub5/Hshoub/Morus_notabilis/WGS/CRR778717_f1.fq.gz \
-    -w /pub5/Hshoub/Morus_notabilis/WGS/CRR778717_r2.fq.gz \
-    -N /pub4/huangshoubian1/NextPolish -t 50 &
+    telocomp_maxmin --Min_length --dir_ont /PATH/algn_output_ont --dir_hifi /PATH/algn_output_hifi -L /PATH/test_HiFi.fq.gz -W /PATH/test_WGS_f1.fq.gz -w /PATH/test_WGS_r2.fq.gz -N /PATH/NextPolish -t 50
 
 Here you need to enter the untrimmed end alignment reads in the Filter, `algn_output_ont` and `algn_output_hifi` respectively, and finally output the polished reads to the directory `tmp_Min_getpos` and `tmp_Max_getpos`.
 
 ##### （2）Telomere complement 
-    nohup /usr/bin/time -v python step3_Vigna_20240822.py --dir_Min -G ../../../../GWHCBIQ00000000.genome.fasta  -m CCCTAAA -M 7 &
+    telocomp_Complement --dir_Min -G /PATH/test_sequence.fasta -m CCCTAAA -M 7 
 
 This is the same as the Telomere complement below, both of which complete the telomere part to the original genome, but the running command is different.
 
@@ -162,7 +154,7 @@ This is the same as the Telomere complement below, both of which complete the te
       -t , --threads      Number of threads to use (default: 20)
       
 #### Run:
-    nohup /usr/bin/time -v python step3_Vigna_20240822.py --Normal -G ../../GWHDEDE00000000.genome.fasta --dir_contigs ../files_NP --dir_trim_L trim_L --dir_trim_R trim_R -L /pub5/Hshoub/Cassava/CRR780166_hifi.fastq.gz -W /pub5/Hshoub/Cassava/WGS/CRR780168_f1.fq.gz -w /pub5/Hshoub/Cassava/WGS/CRR780168_r2.fq.gz -t 20 -N /pub4/huangshoubian1/NextPolish -m CCCTAAA -M 7 &
+    telocomp_Complement  --Normal -G /PATH/test_sequence.fasta --dir_contigs /PATH/files_NP --dir_trim_L trim_L --dir_trim_R trim_R -L /PATH/test_HiFi.fq.gz -W /PATH/test_WGS_f1.fq.gz -w /PATH/test_WGS_r2.fq.gz -t 50 -N /PATH/NextPolish -m CCCTAAA -M 7 
 
 Finally，complement the assembled and polished reads to the original genome, then output the complemented genome(`new_genome.fasta`), and output the telomere position file(`telomere position`) and telomere type file(`telomere_repeats_info.txt`), and the density distribution map of telomeres at each chromosome end(stored in the folder `telomere_plots`).
 
@@ -213,7 +205,7 @@ Telomere density distribution diagram of chromosome ends with telomere complemen
       -t , --threads        Number of threads to use (default: 20)
 
 #### Run:
-    python step4_genomeSyn_20240830_color.py -G1 GCA_028455895.1_ASM2845589v1_genomic_upseq.fna -G2 new_genome_upseq.fasta -pos ../telomere_positions.txt --length 20000 -tel_max 10 -m CCCTAAA --genomeSyn2
+    telocomp_Collinearity -G1 /PATH/test_sequence.fasta -G2 new_genome.fasta -pos /PATH/telomere_positions.txt --length 20000 -tel_max 10 -m CCCTAAA --genomeSyn2
 
 In addition, the left and right ends of the chromosomes of the original genome and the complemented genome(`new_genome.fasta`) are extracted for collinear comparison(`genomeSyn_result`), and the number of telomeres at the corresponding chromosome ends of the two genomes is output,including `telomere.original.num.info` and `telomere.complement.num.info`.
 
