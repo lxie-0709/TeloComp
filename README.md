@@ -73,7 +73,7 @@ Note: TeloComp needs to be run in the same directory from beginning to end!
     Direct input of genomic data：
     telocomp_Filter -G /PATH/test_sequence.fasta.gz -O /PATH/test_ONT.fq.gz -H /PATH/test_HiFi.fq.gz -B out_ONT.bam -b out_HiFi.bam -r /PATH/test_sequence.fasta.fai -c 100 -m CCCTAAA -t 50
     
-    Start by importing the bam file：
+    Start by importing the bam file（Here, use this method to test and run）：
     telocomp_Filter --BamExtr -B /PATH/test_ONT.bam -b /PATH/test_HiFi.bam -r /PATH/test_sequence.fasta.fai -c 100 -m CCCTAAA
 
 
