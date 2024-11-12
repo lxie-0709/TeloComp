@@ -17,7 +17,7 @@ Please note that you must install the following versions of dependent software o
 * [NextPolish-v1.4.1](https://github.com/lxie-0709/TeloComp/blob/main/Dependencies/NextPolish-v1.4.1.tar.gz)
 * GenomeSyn-1.2.7
     
-The above software can be installed using conda, or you can download the software source code from github and run `install.sh` to install it.
+The above software can be installed using conda, downloaded and installed from its github, or installed by running TeloComp's `install.sh`.
 In addition, GenomeSyn needs to check its [github](https://github.com/JM-SONG/GenomeSyn) and install it according to the software introduction.
 
 ## Building on Linux
