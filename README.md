@@ -212,7 +212,7 @@ In addition, the left and right ends of the chromosomes of the original genome a
 ####  Collinearity result
 Collinear alignment between the ***Morus*** ***notabilis*** original genome and the telomeric complemented genome (only chromosomes with complementary telomeres are shown).
 <div align=center>
-<img src="https://github.com/lxie-0709/TeloComp/blob/main/example/test_Collinearity.png" width="588px">
+<img src="https://github.com/lxie-0709/TeloComp/blob/main/example/test_Collinearity.png" width="888px">
 </div>
 
 
