@@ -12,7 +12,7 @@ Please note that you must install the following versions of dependent software o
 * [samtools-1.18](https://github.com/lxie-0709/TeloComp/blob/main/Dependencies/samtools-1.18.tar.gz)
 * [minimap2-2.27](https://github.com/lxie-0709/TeloComp/blob/main/Dependencies/minimap2-2.27.tar.gz)
 * [bwa-0.7.12](https://github.com/lxie-0709/TeloComp/blob/main/Dependencies/bwa-0.7.12.tar.bz2)
-* [Flye-2.9.3](https://github.com/lxie-0709/TeloComp/blob/main/Dependencies/Flye-2.9.3.tar.gz)
+* [Flye-2.9.4](https://github.com/lxie-0709/TeloComp/blob/main/Dependencies/Flye-2.9.4.tar.gz)
 * [racon-v1.4.3](https://github.com/lxie-0709/TeloComp/blob/main/Dependencies/racon-v1.4.3.tar.gz)
 * [NextPolish-v1.4.1](https://github.com/lxie-0709/TeloComp/blob/main/Dependencies/NextPolish-v1.4.1.tar.gz)
 * GenomeSyn-1.2.7
