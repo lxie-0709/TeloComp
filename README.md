@@ -21,7 +21,7 @@ The above software can be installed using conda, downloaded and installed from i
 In addition, GenomeSyn needs to check its [github](https://github.com/JM-SONG/GenomeSyn) and install it according to the software introduction.
 
 ## Building on Linux
-Use the following script to build this software：
+To use the software, you need to follow the following steps to install it.
 
 #### &emsp;1.First, get the source code.
 
