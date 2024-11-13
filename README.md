@@ -1,7 +1,7 @@
 # TeloComp
 TeloComp is an efficient integrated software package for telomere extraction and complementation. It outputs new genome and telomere complementation information, and visualizes the complemented telomere parts with line graphs and colinearity graphs. It is more friendly to scientific researchers and is committed to more complete T2T genome assembly.
 <div align="center">
-<img src="https://github.com/lxie-0709/TeloComp/blob/main/example/TeloComp.png" width="688px">
+<img src="https://github.com/lxie-0709/TeloComp/blob/1.0.0/example/TeloComp.png" width="688px">
 </div>
 
 # Install
@@ -164,8 +164,8 @@ Finally，complement the assembled and polished reads to the original genome, th
 ####  Example: the following pictures show the left and right ends of chromosome 2 of *Morus* *notabilis*.
 Telomere density distribution diagram of chromosome ends with telomere complementation（The following pictures show the left and right ends of chromosome 2).
 <div align="center">
-    <img src="https://github.com/lxie-0709/TeloComp/blob/main/example/test_L_telomere.png" width="388px"/>
-    <img src="https://github.com/lxie-0709/TeloComp/blob/main/example/test_R_telomere.png" width="388px"/>
+    <img src="https://github.com/lxie-0709/TeloComp/blob/1.0.0/example/test_L_telomere.png" width="388px"/>
+    <img src="https://github.com/lxie-0709/TeloComp/blob/1.0.0/example/test_R_telomere.png" width="388px"/>
 </div>
 
 
@@ -215,7 +215,7 @@ In addition, the left and right ends of the chromosomes of the original genome a
 ####  Collinearity result
 Collinear alignment between the ***Morus*** ***notabilis*** original genome and the telomeric complemented genome (only chromosomes with complementary telomeres are shown).
 <div align=center>
-<img src="https://github.com/lxie-0709/TeloComp/blob/main/example/test_Collinearity.png" width="888px">
+<img src="https://github.com/lxie-0709/TeloComp/blob/1.0.0/example/test_Collinearity.png" width="888px">
 </div>
 
 
