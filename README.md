@@ -31,10 +31,12 @@ To use the software, you need to follow the following steps to install it.
 
 #### &emsp;2.Next, execute `install.sh` and `setup.py` in `Dependencies` and `bin` respectively to install software dependencies and configure software.
     （1）Installing dependencies
-        sh install.sh 
+        $ sh install.sh 
         
     （2）Configuring TeloComp
-        sh setup.sh 
+        $ sh setup.sh 
+    (3) Activation environment
+        $ source ~/.bashrc
 
 #### &emsp;3.Finally, verify that it is installed correctly and can be executed by the following command：
     
