@@ -35,7 +35,8 @@ To use the software, you need to follow the following steps to install it.
         
     （2）Configuring TeloComp
         $ sh setup.sh 
-    (3) Activation environment
+        
+     (3) Activation environment
         $ source ~/.bashrc
 
 #### &emsp;3.Finally, verify that it is installed correctly and can be executed by the following command：
