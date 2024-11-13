@@ -29,8 +29,8 @@ To use the software, you need to follow the following steps to install it.
     
     cd TeloComp
 
-#### &emsp;2.Next, configure the software and add the current working directory to the system environment variables to make it globally accessible.
-    （1）Installing Dependencies
+#### &emsp;2.Next, execute `install.sh` and `setup.py` in `Dependencies` and `bin` respectively to install software dependencies and configure software.
+    （1）Installing dependencies
         sh install.sh 
         
     （2）Configuring TeloComp
