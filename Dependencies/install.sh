@@ -25,7 +25,7 @@ echo $bwa_path >> ~/.bashrc
 cd $current_path
 tar zxvf Flye-2.9.4.tar.gz
 cd Flye-2.9.4/
-setup.py install
+python setup.py install
 ##5.racon
 cd $current_path
 tar -zxvf racon-v1.4.3.tar.gz
