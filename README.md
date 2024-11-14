@@ -36,8 +36,12 @@ To use the software, you need to follow the following steps to install it.
         
     （2）Configuring TeloComp
         $ sh setup.sh 
-        
-     (3) Activation environment
+
+    （3）Download [GenomeSyn](https://github.com/JM-SONG/GenomeSyn/archive/refs/heads/main.zip,add the `GenomeSyn-1.2.7` folder to your root directory and perform the following steps:
+        $ chmod -R 777 GenomeSyn-1.2.7
+        $ echo "export PATH=$PATH:/yourPATH/GenomeSyn-1.2.7/bin" >> ~/.bashrc
+
+     (4) Activation environment
         $ source ~/.bashrc
 
 #### &emsp;3.Finally, verify that it is installed correctly and can be executed by the following command：
