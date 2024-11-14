@@ -44,17 +44,17 @@ To use the software, you need to follow the following steps to install it.
 #### &emsp;3.Finally, activate the environment variable and then verify that it is properly installed and executable with the following command:
 
     # Activation environment
-    source ~/.bashrc
+      source ~/.bashrc
     
-    telocomp_Filter -h
+      telocomp_Filter -h
     
-    telocomp_Assembly -h
+      telocomp_Assembly -h
     
-    telocomp_maxmin -h
+      telocomp_maxmin -h
     
-    telocomp_Complement -h
+      telocomp_Complement -h
 
-    telocomp_Collinearity -h
+      telocomp_Collinearity -h
 
 # Usage
 Note: TeloComp needs to be run in the same directory from beginning to end!
