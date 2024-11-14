@@ -30,21 +30,21 @@ To use the software, you need to follow the following steps to install it.
     
     cd TeloComp
 
-#### &emsp;2.Next, execute `install.sh` and `setup.py` in `Dependencies` and `bin` respectively to install software dependencies and configure software.
+#### &emsp;2.Next, execute `install.sh` and `setup.sh` in `Dependencies` and `bin` respectively “ to install the software dependencies and configure the software. 
     （1）Installing dependencies
         $ sh install.sh 
-        
-    （2）Configuring TeloComp
-        $ sh setup.sh 
 
-    （3）Download [GenomeSyn](https://github.com/JM-SONG/GenomeSyn/archive/refs/heads/main.zip,add the `GenomeSyn-1.2.7` folder to your root directory and perform the following steps:
+    （2）Configuring TeloComp
+        $ sh setup.sh
+
+### &emsp;3.Download [GenomeSyn](https://github.com/JM-SONG/GenomeSyn/archive/refs/heads/main.zip), add the GenomeSyn-1.2.7 file to your root directory, and perform the following steps：
         $ chmod -R 777 GenomeSyn-1.2.7
         $ echo "export PATH=$PATH:/yourPATH/GenomeSyn-1.2.7/bin" >> ~/.bashrc
 
-     (4) Activation environment
-        $ source ~/.bashrc
+#### &emsp;3.Finally, activate the environment variable and then verify that it is properly installed and executable with the following command:
 
-#### &emsp;3.Finally, verify that it is installed correctly and can be executed by the following command：
+    # Activation environment
+    source ~/.bashrc
     
     telocomp_Filter -h
     
