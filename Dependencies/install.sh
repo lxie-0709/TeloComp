@@ -57,7 +57,7 @@ pip install teloclip==0.0.4
 ##9.Racon: Installing racon with conda
 conda install bioconda::racon
 ##10.svglib
-conda install svglib=1.1.0
+pip install svglib=1.1.0
 ##11.mummer
 conda install bioconda::mummer
 ##12.perl-bioperl 
