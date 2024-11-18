@@ -1,5 +1,5 @@
 # TeloComp
-TeloComp is an efficient integrated software package for telomere extraction and complementation. It outputs new genome and telomere complementation information, and visualizes the complemented telomere parts with line graphs and colinearity graphs. It is more friendly to scientific researchers and is committed to more complete T2T genome assembly.
+TeloComp is an efficient integrated software package for telomere extraction and complementation. It finalizes the output of the new genome and telomere complementation information and visualizes the complemented telomere portion through line graphs and covariance plots. It is more friendly to researchers and works towards a more complete T2T genome assembly.
 <div align="center">
 <img src="https://github.com/lxie-0709/TeloComp/blob/1.0.0/example/TeloComp.png" width="688px">
 </div>
