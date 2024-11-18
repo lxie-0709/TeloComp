@@ -56,7 +56,7 @@ To use the software, you need to follow the following steps to install it.
       telocomp_Collinearity -h
 
 # Usage
-Note: TeloComp needs to be run in the same directory from beginning to end!
+Note: TeloComp requires that you run the telomere complement command in the same directory from start to finish!
 
 ## Filter
 
