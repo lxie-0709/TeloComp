@@ -15,11 +15,10 @@ Please note that you must install the following versions of dependent software o
 * [Flye-2.9.4](https://github.com/lxie-0709/TeloComp/blob/main/Dependencies/Flye-2.9.4.tar.gz)
 * [racon-v1.4.3](https://github.com/isovic/racon/releases/download/1.4.3/racon-v1.4.3.tar.gz)
 * [NextPolish-v1.4.1](https://github.com/lxie-0709/TeloComp/blob/main/Dependencies/NextPolish-v1.4.1.tar.gz)
-* teloclip-0.0.4
-* GenomeSyn-1.2.7
+* [teloclip-0.0.4](https://github.com/Adamtaranto/teloclip)
+* [GenomeSyn-1.2.7](https://github.com/JM-SONG/GenomeSyn/tree/main)
     
-The above software can be installed using conda, downloaded and installed from its github, or installed by running TeloComp's `install.sh`.
-In addition, GenomeSyn needs to check its [github](https://github.com/JM-SONG/GenomeSyn) and install it according to the software introduction.
+The above software can be installed using conda, downloaded and installed from its github, or by running TeloComp's `install.sh`.
 
 ## Building on Linux
 To use the software, you need to follow the following steps to install it.
