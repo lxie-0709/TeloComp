@@ -104,7 +104,7 @@ First,this step mainly screens out reads containing telomeres beyond the end of 
 #### Run:
      telocomp_Assembly --dir_IN_L trim_L --dir_IN_R trim_R -L /PATH/test_HiFi.fq.gz -W /PATH/test_WGS_f1.fq.gz -w /PATH/test_WGS_r2.fq.gz -N /PATH/NextPolish -t 50 
 
-Next,the screened and processed reads are assembled and polished, and the final results are output to the directory `fils_NP`.
+Next,the screened and processed reads are assembled and polished, and the final results are output to the directory `files_NP`.
 
 ## Extract the longest or shortest reads
 
