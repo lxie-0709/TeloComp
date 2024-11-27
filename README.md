@@ -166,7 +166,7 @@ This is the same as the Telomere complement below, both of which complete the te
 #### Run:
     telocomp_Complement  --Normal -G /PATH/test_sequence.fasta --dir_contigs /PATH/files_NP --dir_trim_L trim_L --dir_trim_R trim_R -L /PATH/test_HiFi.fq.gz -W /PATH/test_WGS_f1.fq.gz -w /PATH/test_WGS_r2.fq.gz -t 50 -N /PATH/NextPolish -m CCCTAAA -M 7 
 
-Finally，complement the assembled and polished reads to the original genome, then output the complemented genome(`new_genome.fasta`), and output the telomere position file(`telomere position`) and telomere type file(`telomere_repeats_info.txt`), and the density distribution map of telomeres at each chromosome end(stored in the folder `telomere_plots`).
+Finally，complement the assembled and polished reads to the original genome, then output the complemented genome(`new_genome.fasta`), and output the telomere position file(`telomere_positions.txt`) and telomere type file(`telomere_repeats_info.txt`), and the density distribution map of telomeres at each chromosome end(stored in the folder `telomere_plots`).
 
 ####  Example: the following pictures show the left and right ends of chromosome 2 of *Morus* *notabilis*.
 Telomere density distribution diagram of chromosome ends with telomere complementation（The following pictures show the left and right ends of chromosome 2).
