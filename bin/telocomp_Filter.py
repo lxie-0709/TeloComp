@@ -30,7 +30,7 @@ def rename_HiFi_in_directory(directory, data_type):
 def run_ont_alignments_extraction(genome, threads, fastq_ont, out_ONT_bam, data_type, ref_genome, motif,
                                   algn_output_ont):
     combined_command = [
-        f"minimap2 -t {threads} -ax map-ont {genome} {fastq_ont} | teloclip --ref {ref_genome} | samtools sort > {out_ONT_bam}",
+        f"minimap2 -t {threads} -ax map-pb {genome} {fastq_ont} | teloclip --ref {ref_genome} | samtools sort > {out_ONT_bam}",
         f"samtools view -h {out_ONT_bam} | teloclip --ref {ref_genome} --motifs {motif} | teloclip-extract --refIdx {ref_genome} --extractReads --extractDir {algn_output_ont}"
     ]
 
@@ -43,7 +43,7 @@ def run_ont_alignments_extraction(genome, threads, fastq_ont, out_ONT_bam, data_
 def run_hifi_alignments_extraction(genome, threads, fastq_hifi, out_HiFi_bam, data_type, ref_genome, motif,
                                    algn_output_hifi):
     combined_command = [
-        f"minimap2 -t {threads} -ax map-ont {genome} {fastq_hifi} | teloclip --ref {ref_genome} | samtools sort > {out_HiFi_bam}",
+        f"minimap2 -t {threads} -ax map-pb {genome} {fastq_hifi} | teloclip --ref {ref_genome} | samtools sort > {out_HiFi_bam}",
         f"samtools view -h {out_HiFi_bam} | teloclip --ref {ref_genome} --motifs {motif} | teloclip-extract --refIdx {ref_genome} --extractReads --extractDir {algn_output_hifi}"
     ]
     for cmd in combined_command:
