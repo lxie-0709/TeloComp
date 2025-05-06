@@ -92,18 +92,27 @@ First,this step mainly screens out reads containing telomeres beyond the end of 
 ## Assembly
 
 #### Options:
+      -h, --help          show this help message and exit
       --dir_IN_L          Directory containing left-aligned reads (FASTA format)
-      --dir_IN_R          Directory containing right-aligned reads (FASTA
-                          format)
+      --dir_IN_R          Directory containing right-aligned reads (FASTA format)
+      --flye              Flye assembly module
+      -a, --assemble      Alternative assemble module
+      -t , --threads      Threads (default:20)
+      --min_overlap       Min overlap (default:50)
+      --error_rate        Error rate (default:0.15)
+      --kmer_size         K-mer size (default:15)
       -L , --lgsreads     Long-read sequencing data
       -W , --wgs1         Path to WGS reads (read 1)
       -w , --wgs2         Path to WGS reads (read 2)
       -N , --NextPolish   Path to NextPolish tool
-      -t , --threads      Number of threads to use (default: 20)
+
 
 #### Run:
+    （1）Flye assembly module (default assembly)
      telocomp_Assembly --dir_IN_L trim_L --dir_IN_R trim_R -L /PATH/test_HiFi.fq.gz -W /PATH/test_WGS_f1.fq.gz -w /PATH/test_WGS_r2.fq.gz -N /PATH/NextPolish -t 50 
-
+    （2）assemble assembly module
+     telocomp_Assembly --dir_IN_L trim_L --dir_IN_R trim_R -L /PATH/test_HiFi.fq.gz -W /PATH/test_WGS_f1.fq.gz -w /PATH/test_WGS_r2.fq.gz -N /PATH/NextPolish -t 50 --assemble
+    
 Next,the screened and processed reads are assembled and polished, and the final results are output to the directory `files_NP`.
 
 ## Extract the longest or shortest reads
