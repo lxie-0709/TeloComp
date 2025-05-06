@@ -218,7 +218,7 @@ def asm_contig_racon(input_file, lgsreads, wgs1, wgs2, threads, NextPolish):
         chrn,et,d, = parts[0],parts[1],parts[3]
         with open(f"{outd}/{chrn}_{et}_np_{d}.fasta",'w') as h:
             SeqIO.write(rec,h,"fasta")
-        log.debug(f"Wrote polish chunk {new_fn}")
+        log.debug(f"Wrote polish chunk {newf}")
     shutil.rmtree(tmp)
     asm_contig_polish(outd,lgsreads,wgs1,wgs2,threads,NextPolish)
 
