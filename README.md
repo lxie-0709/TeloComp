@@ -45,7 +45,9 @@ To use the software, you need to follow the following steps to install it.
     # Activation environment
       source ~/.bashrc
     
-      telocomp_Filter -h
+      telocomp_Filter_1 -h
+
+      telocomp_Filter_2 -h
     
       telocomp_Assembly -h
     
@@ -60,34 +62,39 @@ Note: TeloComp requires that you run the telomere complement command in the same
 
 ## Filter
 
-#### Options:
-      -h, --help        show this help message and exit
-      -G , --genome     Input genome file (FASTA format)
-      -O , --ONT        Input ONT data
-      -H , --HiFi       Input HiFi data
-      -B , --ONTbam     The output bam file. If the [--BamExtr] parameter is
-                        selected, it is the input bam file.
-      -b , --HiFibam    The output bam file. If the [--BamExtr] parameter is
-                        selected, it is the input bam file.
-      --BamExtr         Selecting this parameter does not perform genome
-                        alignment to obtain bam, but directly inputs the sorted
-                        bam file, and then screens the qualified reads.
-      -r , --ref        Index file of reference genome
-      -c , --coverage   Choose the coverage you think is appropriate, that is,
-                        the minimum length of reads
-      -m , --motif      Telomeric repeats sequences, e.g., plant:
-                        CCCTAAA(TTTAGGG), animal: TTAGGG(CCCTAA), etc.
-      -t , --threads    Number of threads to use (default: 20)
+#### Options_1:
+      -h, --help       show this help message and exit
+      --genome         Input genome FASTA file.
+      --fai            Input genome index (FAI) file.
+      --ont            Input ONT data file (optional).
+      --hifi           Input HiFi data file (optional).
+      --threads        Number of threads to use with minimap2.
+      --motifs [ ...]  A list of telomeric repeat motifs to use for filtering (optional).
+      --max_break      Maximum tolerable fracture length for soft shear.
+      --min_clip       Minimum cutting length.
+      --Ob             BAM output path after ONT filtering.
+      --Hb             HiFi filtered BAM output path.
+
+#### Options_2:
+      -h, --help         show this help message and exit
+      --ont_bam          ONT BAM
+      --hifi_bam         HiFi BAM
+      -o , --out_dir     Directory where both step1_2 and step1_3 should write their outputs
+      -c , --coverage    Coverage parameter for step1_3 (passed to -c)
+      -p , --parallels   Parallels for step1_3 (passed to -p)
 
 #### Run:
-    Direct input of genomic data：
-    telocomp_Filter -G /PATH/test_sequence.fasta.gz -O /PATH/test_ONT.fq.gz -H /PATH/test_HiFi.fq.gz -B out_ONT.bam -b out_HiFi.bam -r /PATH/test_sequence.fasta.fai -c 100 -m CCCTAAA -t 50
+（1）Get the bam file containing the end software cutting sequence
+
+    telocomp_Filter_1 --genome /PATH/genome.fasta --fai /PATH/genome.fasta.fai --ont /PATH/ont.fq.gz --hifi /PATH/hifi.fastq.gz --threads 50 --Ob /PATH/ont_out.bam --Hb /PATH/hifi_out.bam
+
+（2）Detection, extraction, and processing of reads.Start by importing the bam file（Here, run the test using this procedure.）：
     
-    Start by importing the bam file（Here, run the test using this procedure.）：
-    telocomp_Filter --BamExtr -B /PATH/test_ONT.bam -b /PATH/test_HiFi.bam -r /PATH/test_sequence.fasta.fai -c 100 -m CCCTAAA
+    telocomp_Filter_2 --ont_bam /PATH/ont_out.bam --hifi_bam /PATH/hifi_out.bam -o PATH/output_dir/ -c 100 -p 10
 
 
-First,this step mainly screens out reads containing telomeres beyond the end of the genome, trims reads according to coverage, and outputs the final results to the directories `trim_L` and `trim_R` according to the direction.
+
+First, this step mainly detects and filters out reads containing telomeres outside the ends of the genome, trims the reads according to the coverage, and finally outputs the final results to the `trim_L` and `trim_R` directories according to the direction.
 
 ## Assembly
 
