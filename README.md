@@ -62,17 +62,17 @@ Note: TeloComp requires that you run the telomere complement command in the same
 ## Filter
 
 #### Options_1:
-      -h, --help       show this help message and exit
-      --genome         Input genome FASTA file.
-      --fai            Input genome index (FAI) file.
-      --ont            Input ONT data file (optional).
-      --hifi           Input HiFi data file (optional).
-      --threads        Number of threads to use with minimap2.
-      --motifs [ ...]  A list of telomeric repeat motifs to use for filtering (optional).
-      --max_break      Maximum tolerable fracture length for soft shear.
-      --min_clip       Minimum cutting length.
-      --Ob             BAM output path after ONT filtering.
-      --Hb             HiFi filtered BAM output path.
+      -h, --help   show this help message and exit
+      --genome     Input genome FASTA file.
+      --fai        Input genome index (FAI) file.
+      --ont        Input ONT data file (optional).
+      --hifi       Input HiFi data file (optional).
+      --threads    Number of threads to use with minimap2.
+      --motifs     A list of telomeric repeat motifs to use for filtering (optional).
+      --max_break  Maximum tolerable fracture length for soft shear.
+      --min_clip   Minimum cutting length.
+      --Ob         BAM output path after ONT filtering.
+      --Hb         HiFi filtered BAM output path.
 
 #### Options_2:
       -h, --help       show this help message and exit
