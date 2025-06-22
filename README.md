@@ -75,12 +75,13 @@ Note: TeloComp requires that you run the telomere complement command in the same
       --Hb             HiFi filtered BAM output path.
 
 #### Options_2:
-      -h, --help         show this help message and exit
-      --ont_bam          ONT BAM
-      --hifi_bam         HiFi BAM
-      -o , --out_dir     Directory where both step1_2 and step1_3 should write their outputs
-      -c , --coverage    Coverage parameter for step1_3 (passed to -c)
-      -p , --parallels   Parallels for step1_3 (passed to -p)
+      -h, --help       show this help message and exit
+      --ont_bam        ONT BAM
+      --hifi_bam       HiFi BAM
+      -o, --out_dir    Directory where both step1_2 and step1_3 should write their outputs
+      -c, --coverage   Coverage parameter for step1_3 (passed to -c)
+      -p, --parallels  Parallels for step1_3 (passed to -p)
+      --min_ratio      The proportion of the original genome sequence to the length of the reads, default=0.2
 
 #### Run:
 （1）Get the bam file containing the end software cutting sequence
@@ -89,7 +90,8 @@ Note: TeloComp requires that you run the telomere complement command in the same
 
 （2）Detection, extraction, and processing of reads.Start by importing the bam file（Here, run the test using this procedure.）：
     
-    telocomp_Filter_2 --ont_bam /PATH/ont_out.bam --hifi_bam /PATH/hifi_out.bam -o PATH/output_dir/ -c 100 -p 10
+    telocomp_Filter_2 --ont_bam /PATH/ont_out.bam --hifi_bam /PATH/hifi_out.bam -o PATH/output_dir/ -c 100 -p 10 --min_ratio 0.2
+
 
 
 
