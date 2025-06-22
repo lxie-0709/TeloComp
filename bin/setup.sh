@@ -1,6 +1,7 @@
 #!bin/bash
 #Refers to the tool execution name
-ln -s $(pwd)/telocomp_Filter.py ./telocomp_Filter
+ln -s $(pwd)/telocomp_Filter_1.py ./telocomp_Filter_1
+ln -s $(pwd)/telocomp_Filter_2.py ./telocomp_Filter_2
 ln -s $(pwd)/telocomp_Assembly.py ./telocomp_Assembly
 ln -s $(pwd)/telocomp_maxmin.py ./telocomp_maxmin
 ln -s $(pwd)/telocomp_Complement.py ./telocomp_Complement
