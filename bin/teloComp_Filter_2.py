@@ -11,7 +11,7 @@ if HERE not in sys.path:
     sys.path.insert(0, HERE)
 
 # Now we can import the step2 and step3 scripts as modules
-import teloComp_Det_Ext_2506_test as step1_2
+import teloComp_Det_Ext as step1_2
 import telocomp_trim as step1_3
 
 def run_step1_2(ont_bam, hifi_bam, outdir, min_ratio):
