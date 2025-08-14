@@ -207,7 +207,7 @@ def Max_contig_polish(output_dir, lgsreads, wgs1, wgs2, threads, NextPolish):
         work_dir = os.path.join(current_dir, f"Dir_{outputname}")
         os.makedirs(work_dir, exist_ok=True)
 
-        final_dir = os.path.join(current_dir, "tmp_Max_getpos")
+        final_dir = os.path.join(current_dir, "MaxLength_NP")
         os.makedirs(final_dir, exist_ok=True)
 
         with open(sgs_fofn, 'w') as sgs_file:
@@ -415,7 +415,7 @@ def Min_contig_polish(output_dir, lgsreads, wgs1, wgs2, threads, NextPolish):
         work_dir = os.path.join(current_dir, f"Dir_{outputname}")
         os.makedirs(work_dir, exist_ok=True)
 
-        final_dir = os.path.join(current_dir, "tmp_Min_getpos")
+        final_dir = os.path.join(current_dir, "MinLength_NP")
         os.makedirs(final_dir, exist_ok=True)
 
         with open(sgs_fofn, 'w') as sgs_file:
