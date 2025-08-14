@@ -141,15 +141,20 @@ If you choose to directly extract the longest or shortest reads, you can skip th
       -w , --wgs2         Path to WGS reads (read 2)
       -N , --NextPolish   Path to NextPolish tool
       -t , --threads      Number of threads to use (default: 20)
+      --polish            Perform polishing with NextPolish
 
 #### Run:
 ##### Extract reads
     （1）Extract the longest reads
-    telocomp_maxmin --Max_length --dir_ont /PATH/algn_output_ont --dir_hifi /PATH/algn_output_hifi -L /PATH/test_HiFi.fq.gz -W /PATH/test_WGS_f1.fq.gz -w /PATH/test_WGS_r2.fq.gz -N /PATH/NextPolish -t 50 
+    telocomp_maxmin --Max_length --dir_ont /PATH/algn_output_ont --dir_hifi /PATH/algn_output_hifi -L /PATH/test_HiFi.fq.gz -W /PATH/test_WGS_f1.fq.gz -w /PATH/test_WGS_r2.fq.gz -N /PATH/NextPolish -t 50 --polish
 
 
     （2）Extract the shortest reads
-    telocomp_maxmin --Min_length --dir_ont /PATH/algn_output_ont --dir_hifi /PATH/algn_output_hifi -L /PATH/test_HiFi.fq.gz -W /PATH/test_WGS_f1.fq.gz -w /PATH/test_WGS_r2.fq.gz -N /PATH/NextPolish -t 50
+    telocomp_maxmin --Min_length --dir_ont /PATH/algn_output_ont --dir_hifi /PATH/algn_output_hifi -L /PATH/test_HiFi.fq.gz -W /PATH/test_WGS_f1.fq.gz -w /PATH/test_WGS_r2.fq.gz -N /PATH/NextPolish -t 50 --polish
+
+    （3）Without polishing, run the following code
+    telocomp_maxmin --Min_length --dir_ont /PATH/algn_output_ont --dir_hifi /PATH/algn_output_hifi
+    telocomp_maxmin --Max_length --dir_ont /PATH/algn_output_ont --dir_hifi /PATH/algn_output_hifi
 
 Here you need to enter the untrimmed end alignment reads in the Filter, `algn_output_ont` and `algn_output_hifi` respectively, and finally output the polished reads to the directory `tmp_Min_getpos` and `tmp_Max_getpos`.
 
