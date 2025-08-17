@@ -3,10 +3,13 @@
 Welcome to TeloComp's documentation!
 =====================================
 
+
 Contents:
+---------
 
 .. toctree::
    :maxdepth: 2
+   :caption: Contents:
 
    content/installation
    content/Filter_module  
@@ -17,4 +20,5 @@ Contents:
    content/Release_notes  
    content/Citation
    content/FAQ 
+
 
