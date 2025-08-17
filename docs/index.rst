@@ -1,7 +1,10 @@
-.. TeloComp documentation master file
+TeloComp
+========
 
 Welcome to TeloComp's documentation!
-=====================================
+------------------------------------
+
+.. image:: ./images/TeloComp.png
 
 
 Contents:
@@ -19,6 +22,7 @@ Contents:
    content/Release_notes  
    content/Citation
    content/FAQ 
+
 
 
 
