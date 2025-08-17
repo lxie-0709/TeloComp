@@ -4,16 +4,16 @@ build:
   os: ubuntu-22.04
   tools:
     python: "3.10"
+  # 这里设置克隆深度，0 = 不限制深度（完整克隆）
+  clone:
+    depth: 0
 
 sphinx:
-  configuration: docs/conf.py   
+  configuration: docs/conf.py   # 你的 conf.py 路径
 
 python:
   install:
     - requirements: docs/requirements.txt
 
-vcs:
-  type: git
-  depth: 0   
 
 
