@@ -9,11 +9,12 @@ Contents:
    :maxdepth: 2
 
    content/installation
-   content/Filter Module  
-   content/Assembly Module
-   content/Extract Module 
-   content/Complement Module  
-   content/Collinearity Analysis 
-   content/Release Notes  
+   content/Filter_module  
+   content/Assembly_module
+   content/Extract_module 
+   content/Complement_module  
+   content/Collinearity_analysis 
+   content/Release_notes  
    content/Citation
    content/FAQ 
+
