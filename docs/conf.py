@@ -27,7 +27,7 @@ sys.path.insert(0, os.path.abspath('..'))  # 项目根目录
 # 项目信息
 # ----------------------------
 project = 'TeloComp'
-author = 'Shoubian Huang && Liang Xie'
+author = 'Shoubian Huang Liang Xie'
 release = '0.1.0'
 version = release
 
@@ -50,4 +50,5 @@ exclude_patterns = []
 # 使用 Sphinx 默认主题
 html_theme = 'sphinx_rtd_theme'  # 你也可以用 'sphinx_rtd_theme'
 html_static_path = ['_static']
+
 
