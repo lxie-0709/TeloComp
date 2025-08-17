@@ -2,8 +2,8 @@
 import os
 import sys
 from unittest.mock import Mock
-
 import warnings
+
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 # ----------------------------
@@ -27,7 +27,7 @@ sys.path.insert(0, os.path.abspath('..'))  # 项目根目录
 # 项目信息
 # ----------------------------
 project = 'TeloComp'
-author = 'Liang Xie'
+author = 'Shoubian Huang && Liang Xie'
 release = '0.1.0'
 version = release
 
@@ -39,15 +39,13 @@ extensions = [
     'sphinx.ext.viewcode',
 ]
 
-templates_path = ['_templates']
-exclude_patterns = ['_build']
-
 source_suffix = '.rst'
 master_doc = 'index'
 language = 'en'
+exclude_patterns = []
 
 # ----------------------------
 # HTML 输出配置
 # ----------------------------
-html_theme = 'sphinx_rtd_theme'
-html_static_path = ['_static']
+# 使用 Sphinx 默认主题
+html_theme = 'alabaster'
