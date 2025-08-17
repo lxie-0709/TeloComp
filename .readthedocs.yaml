@@ -11,5 +11,7 @@ sphinx:
 python:
   install:
     - requirements: docs/requirements.txt
+vcs:
+  depth: 0  
 
 
