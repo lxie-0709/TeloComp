@@ -1,7 +1,7 @@
 Installation
 ============
 
-.. image:: ../example/TeloComp.png
+.. image:: https://github.com/lxie-0709/TeloComp/blob/1.0.0/example/TeloComp.png
 
 This tool requires a number of third-party software packages.  
 Before installation, please make sure you are working within a Linux environment and that
