@@ -43,8 +43,15 @@ Example
 
 The following pictures show the left and right ends of chromosome 2 of `Morus notabilis`.Telomere density distribution diagram of chromosome ends with telomere complementation（The following pictures show the left and right ends of chromosome 2).
 
-.. figure:: ../images/test_L_telomere.png
+Telomere density plot at the left end
 
+.. figure:: ../images/test_L_telomere.png
+    :scale: 70 %
+    :align: center
+
+Telomere density plot at the right end
 .. figure:: ../images/test_R_telomere.png
+    :scale: 70 %
+    :align: center
 
 
