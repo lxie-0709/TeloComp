@@ -144,6 +144,16 @@ If you choose to directly extract the longest or shortest reads, you can skip th
       -t , --threads      Number of threads to use (default: 20)
       --polish            Perform polishing with NextPolish
 
+      # Parameters of telocomp_Complement
+      --dir_Max           Select the telomere reads obtained by polishing the longest reads to
+                          add to the genome
+      --dir_Min           Select the telomere reads obtained by polishing the shortest reads
+                          to add to the genome
+      -m , --motif        Telomeric repeats sequences, e.g., plant: CCCTAAA(TTTAGGG), animal:
+                          TTAGGG(CCCTAA), etc.
+      -M , --motif_num    Input the number of bases of the telomere motif
+
+
 #### Run:
 ##### Extract reads
     （1）Extract the longest reads
@@ -160,6 +170,7 @@ If you choose to directly extract the longest or shortest reads, you can skip th
 Here you need to enter the untrimmed end alignment reads in the Filter, `algn_output_ont` and `algn_output_hifi` respectively, and finally output the polished reads to the directory `MaxLength_NP` and `MinLength_NP`.
 
 ##### （2）Telomere complement 
+    telocomp_Complement --dir_Max -G /PATH/test_sequence.fasta -m CCCTAAA -M 7
     telocomp_Complement --dir_Min -G /PATH/test_sequence.fasta -m CCCTAAA -M 7 
 
 This is the same as the Telomere complement below, both of which complete the telomere part to the original genome, but the running command is different.
