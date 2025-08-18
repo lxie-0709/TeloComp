@@ -1,32 +1,42 @@
 Assembly Module  
 ===============
 
-The **Filter module** primarily performs the following tasks: extracting soft-clipped sequences, detecting telomere motifs, extracting reads containing the telomere motifs, and performing pre-assembly processing on the obtained reads. **TeloComp Filter_1** outputs `BAM` files containing soft-clipped sequences that extend beyond the chromosomal ends, for both ONT and HiFi reads. **TeloComp Filter_2** first identifies the main telomere sequence types, displaying the top 10 on the screen and saving the remaining types to a `TXT` file. After the user selects the desired telomere types, Filter2 extracts and outputs the corresponding reads in FASTA format, stored separately in the `ONT` and `HiFi` directories. Finally, the processed data are output to the `trim_L` and `trim_R` directories.
-
-TeloComp Filter_1
------------------
-
-The first step of `Filter module` is intended to extract soft-clipped sequences located beyond the chromosomal ends of the genome.
+The **Assembly module** primarily assembles the reads processed by the **Filter module**, and outputs the final assembly results to the ``Files_NP`` directory.
 
 .. code:: bash
 
     # optional arguments:
-    #   -h, --help   show this help message and exit
-    #   --genome     Input genome FASTA file.
-    #   --fai        Input genome index (FAI) file.
-    #   --ont        Input ONT data file (optional).
-    #   --hifi       Input HiFi data file (optional).
-    #   --threads    Number of threads to use with minimap2.
-    #   --motifs     A list of telomeric repeat motifs to use for filtering (optional).
-    #   --max_break  Maximum tolerable fracture length for soft shear.
-    #   --min_clip   Minimum cutting length.
-    #   --Ob         BAM output path after ONT filtering.
-    #   --Hb         HiFi filtered BAM output path.
+    # -h, --help          show this help message and exit
+    # --dir_IN_L          Directory containing left-aligned reads (FASTA format)
+    # --dir_IN_R          Directory containing right-aligned reads (FASTA format)
+    # --flye              Flye assembly module (default: True)
+    # --assemble, -a      Assemble using an alternative assembly module
+    # -L , --lgsreads     Long-read sequencing data
+    # -W , --wgs1         Path to WGS reads (read 1)
+    # -w , --wgs2         Path to WGS reads (read 2)
+    # -N , --NextPolish   Path to NextPolish tool
+    # -t , --threads      Number of threads to use (default: 20)
 
-    $ telocomp_Filter_1 --genome genome.fasta \
-                        --fai genome.fasta.fai \
-                        --ont ont.fq.gz \
-                        --hifi hifi.fastq.gz \
-                        --threads 50 \
-                        --Ob ont_out.bam --Hb hifi_out.bam 
+    # The Assemble module can be adjusted using the following parameters
+    # --min_overlap       Minimum overlap length (default: 50)
+    # --error_rate        Error rate for assembly (default: 0.15)
+    # --kmer_size         K-mer size (default: 15)
+
+
+    # Flye assembly module (default assembly)
+    $ telocomp_Assembly --dir_IN_L trim_L \
+                        --dir_IN_R trim_R \
+                        -L HiFi.fq.gz \
+                        -W WGS_f1.fq.gz \
+                        -w WGS_r2.fq.gz \
+                        -N /PATH/NextPolish -t 50 
+
+    # assemble assembly module
+    $ telocomp_Assembly --dir_IN_L trim_L \
+                        --dir_IN_R trim_R \
+                        -L HiFi.fq.gz \
+                        -W WGS_f1.fq.gz \
+                        -w WGS_r2.fq.gz \
+                        -N /PATH/NextPolish \
+                        -t 50 --assemble
 
