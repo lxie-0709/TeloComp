@@ -1,51 +1,36 @@
 Filter module
 =============
 
-.. contents::
-    :local:
+TeloComp Filter_1
+-----------------
 
-Dependency installation
------------------------
+The first step of `Filter module` is intended to extract soft-clipped sequences located beyond the chromosomal ends of the genome.
 
-* python >= 3.10
-* numpy >= 
-* scipy >= 
-* matplotlib-base >= 3.1.*
-* ipykernel >= 5.3.0
-* pysam >= 
-* intervaltree >= 
-* biopython
-* pytables >= 3.6.*
-* pandas >= 1.1.*
-* pybigwig >= 0.3.*
-* jinja2 >= 2.11
-* unidecode >= 1.1.*
-* hicmatrix >= 15
-* hic2cool >= 0.8.3
-* psutil >= 5.7.*
-* pygenometracks >= 3.5
-* fit_nbinom >= 1.1
-* cooler >= 0.8.10
-* krbalancing >= 0.0.5 (Needs the library eigen; openmp is recommended for linux users. No openmp support on macOS.)
-* pybedtools >= 0.8.*
-* future >= 0.18
-* tqdm >= 4.50
-* hyperopt >= 0.2.4
-* python-graphviz >= 0.14
-* samtools >= 1.18
-* minimap2 >= 2.27
-* bwa >= 0.7.17
-* Flye >= 2.9.4
-* pilon >= 1.2.4
-* NextPolish >= 1.4.1
-* GenomeSyn >= 1.2.7
- 
-NextPolish: It is recommended to install from source to ensure full functionality.
-Other dependencies: They can be installed via conda, or downloaded and installed from their GitHub repositories, or installed automatically by running the install.sh script provided with TeloComp.
+.. code:: bash
+
+    # optional arguments:
+    #   -h, --help   show this help message and exit
+    #   --genome     Input genome FASTA file.
+    #   --fai        Input genome index (FAI) file.
+    #   --ont        Input ONT data file (optional).
+    #   --hifi       Input HiFi data file (optional).
+    #   --threads    Number of threads to use with minimap2.
+    #   --motifs     A list of telomeric repeat motifs to use for filtering (optional).
+    #   --max_break  Maximum tolerable fracture length for soft shear.
+    #   --min_clip   Minimum cutting length.
+    #   --Ob         BAM output path after ONT filtering.
+    #   --Hb         HiFi filtered BAM output path.
+
+    $ telocomp_Filter_1 --genome genome.fasta \
+                        --fai genome.fasta.fai \
+                        --ont ont.fq.gz \
+                        --hifi hifi.fastq.gz \
+                        --threads 50 \
+                        --Ob ont_out.bam --Hb hifi_out.bam \
 
 
-Linux Installation
-------------------
+TeloComp Filter_1
+-----------------
 
 To use the software, you need to follow the following steps to install it.
 
