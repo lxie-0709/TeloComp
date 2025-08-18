@@ -70,10 +70,9 @@ def main():
         formatter_class=NoMetavarFormatter
     )
     
-    parser.add_argument("--ont_bam",  required=True, help="ONT BAM")
-    parser.add_argument("--hifi_bam", required=True, help="HiFi BAM")
-    parser.add_argument("-o","--out_dir", required=True, 
-                        help="Directory where both step1_2 and step1_3 should write their outputs")
+    parser.add_argument("--ont_bam",  required=True, help="Input ONT BAM")
+    parser.add_argument("--hifi_bam", required=True, help="Input HiFi BAM")
+    parser.add_argument("-o","--out_dir", required=True, help="Output directory")
     parser.add_argument("-c","--coverage", type=float, default=100, 
                         help="The coverage parameter ranges from 0 to 100 and is used to trim reads according to the selected coverage level")
     parser.add_argument("-p","--parallels",  type=int,   default=5,
