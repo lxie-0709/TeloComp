@@ -157,7 +157,7 @@ If you choose to directly extract the longest or shortest reads, you can skip th
     telocomp_maxmin --Min_length --dir_ont /PATH/algn_output_ont --dir_hifi /PATH/algn_output_hifi
     telocomp_maxmin --Max_length --dir_ont /PATH/algn_output_ont --dir_hifi /PATH/algn_output_hifi
 
-Here you need to enter the untrimmed end alignment reads in the Filter, `algn_output_ont` and `algn_output_hifi` respectively, and finally output the polished reads to the directory `tmp_Min_getpos` and `tmp_Max_getpos`.
+Here you need to enter the untrimmed end alignment reads in the Filter, `algn_output_ont` and `algn_output_hifi` respectively, and finally output the polished reads to the directory `MaxLength_NP` and `MinLength_NP`.
 
 ##### （2）Telomere complement 
     telocomp_Complement --dir_Min -G /PATH/test_sequence.fasta -m CCCTAAA -M 7 
