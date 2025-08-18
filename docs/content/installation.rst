@@ -1,8 +1,6 @@
 Installation
 ============
 
-.. image:: /example/TeloComp.png
-
 This tool requires a number of third-party software packages.  
 Before installation, please make sure you are working within a Linux environment and that
 `git`, `conda` or `mamba` are already installed.
@@ -14,30 +12,8 @@ Before installation, please make sure you are working within a Linux environment
 --------------------------
 
 * python >= 3.10
-* numpy >= 
-* scipy >= 
-* matplotlib-base >= 3.1.*
-* ipykernel >= 5.3.0
-* pysam >= 
-* intervaltree >= 
-* biopython
-* pytables >= 3.6.*
-* pandas >= 1.1.*
-* pybigwig >= 0.3.*
-* jinja2 >= 2.11
-* unidecode >= 1.1.*
-* hicmatrix >= 15
-* hic2cool >= 0.8.3
-* psutil >= 5.7.*
-* pygenometracks >= 3.5
-* fit_nbinom >= 1.1
-* cooler >= 0.8.10
-* krbalancing >= 0.0.5 (Needs the library eigen; openmp is recommended for linux users. No openmp support on macOS.)
-* pybedtools >= 0.8.*
-* future >= 0.18
-* tqdm >= 4.50
-* hyperopt >= 0.2.4
-* python-graphviz >= 0.14
+* pysam >= 0.22.0
+* biopython >= 1.81
 * samtools >= 1.18
 * minimap2 >= 2.27
 * bwa >= 0.7.17
@@ -46,7 +22,7 @@ Before installation, please make sure you are working within a Linux environment
 * NextPolish >= 1.4.1
 * GenomeSyn >= 1.2.7
 
-### 1.1 NextPolish (recommended: install from source)
+1.1 NextPolish (recommended: install from source)
 
 .. code-block:: bash
 
@@ -61,7 +37,7 @@ Add NextPolish to your ``PATH`` (recommended):
     $ echo "export PATH=\$PATH:/path/to/NextPolish" >> ~/.bashrc
     $ source ~/.bashrc
 
-Other dependencies: They can be installed via conda, or downloaded and installed from their GitHub repositories, or installed automatically by running the ``install.sh`` script provided with TeloComp.
+1.2 Other dependencies: They can be installed via conda, or downloaded and installed from their GitHub repositories, or installed automatically by running the ``install.sh`` script provided with TeloComp.
 
 
 2. Linux Installation
@@ -69,7 +45,7 @@ Other dependencies: They can be installed via conda, or downloaded and installed
 
 To use the software, you need to follow the following steps to install it.
 
-## 2.1.Obtain software package from GitHub:
+2.1 Obtain software package from GitHub:
 Open the software’s GitHub repository, e.g., https://github.com/lxie-0709/TeloComp.
 Click the “Code” button and select “Download ZIP” to get the package, or copy the repository URL for git clone.
 To clone via command line:
@@ -79,7 +55,7 @@ To clone via command line:
     $ git clone git@github.com:lxie-0709/TeloComp.git
     $ cd TeloComp
 
-## 2.2.Install dependencies and configure the software.
+2.2 Install dependencies and configure the software.
 Please install the required dependencies under the ``Dependencies/`` directory and configure the executable programs in the ``bin/``directory, respectively.
 The Dependencies folder is intended for third-party dependency packages, whereas the bin directory contains or links to the actual tools to be executed.
 
