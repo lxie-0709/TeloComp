@@ -1,6 +1,9 @@
 Complement Module 
 =================
 
+Complement
+----------
+
 The **Complement module** complements the original genome with the assembled and polished reads, producing the completed genome file (``new_genome.fasta``).It also outputs the telomere position file (``telomere_positions.txt``), the telomere type file (``telomere_repeats_info.txt``), and density distribution plots of telomeres at the ends of each chromosome (stored in the ``telomere_plots18`` folder).
 
 .. code:: bash
