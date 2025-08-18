@@ -44,10 +44,10 @@ The second step of the `Filter module` is designed to detect, extract, and proce
     #    --hifi_bam       Input HiFi BAM
     #    -o, --out_dir    Output directory
     #    -c, --coverage   The coverage parameter ranges from 0 to 100 and is used to trim reads
-                          according to the selected coverage level
+    #                     according to the selected coverage level
     #    -p, --parallels  Parameter for parallel processing of reads, with a default value of 5
     #    --min_ratio      The proportion of the original genome sequence to the length of the
-                          reads, default=0.2
+    #                     reads, default=0.2
 
     $ telocomp_Filter_2 --ont_bam ont_out.bam \
                         --hifi_bam hifi_out.bam \
