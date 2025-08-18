@@ -28,7 +28,7 @@ The first step of `Filter module` is intended to extract soft-clipped sequences 
                         --ont ont.fq.gz \
                         --hifi hifi.fastq.gz \
                         --threads 50 \
-                        --Ob ont_out.bam --Hb hifi_out.bam \
+                        --Ob ont_out.bam --Hb hifi_out.bam 
 
 
 TeloComp Filter_2
