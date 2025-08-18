@@ -3,63 +3,91 @@ Extract Module
 
 Module for extracting the longest or shortest reads.
 ----------------------------------------------------
-The **Filter module** primarily performs the following tasks: extracting soft-clipped sequences, detecting telomere motifs, extracting reads containing the telomere motifs, and performing pre-assembly processing on the obtained reads. **TeloComp Filter_1** outputs ``BAM`` files containing soft-clipped sequences that extend beyond the chromosomal ends, for both ONT and HiFi reads. **TeloComp Filter_2** first identifies the main telomere sequence types, displaying the top 10 on the screen and saving the remaining types to a ``TXT`` file. After the user selects the desired telomere types, Filter2 extracts and outputs the corresponding reads in FASTA format, stored separately in the ``ONT`` and ``HiFi`` directories. Finally, the processed data are output to the ``trim_L`` and ``trim_R`` directories.
 
-Longest read 
--------------
-
-The first step of **Filter module** is intended to extract soft-clipped sequences located beyond the chromosomal ends of the genome.
+The **Extract module** is designed for use cases where direct extraction is required without assembly. It extracts telomeric sequences located beyond the chromosomal ends and containing telomere motifs, and directly integrates the extracted sequences into the original genome.
 
 .. code:: bash
 
     # optional arguments:
-    #   -h, --help   show this help message and exit
-    #   --genome     Input genome FASTA file.
-    #   --fai        Input genome index (FAI) file.
-    #   --ont        Input ONT data file (optional).
-    #   --hifi       Input HiFi data file (optional).
-    #   --threads    Number of threads to use with minimap2.
-    #   --motifs     A list of telomeric repeat motifs to use for filtering (optional).
-    #   --max_break  Maximum tolerable fracture length for soft shear.
-    #   --min_clip   Minimum cutting length.
-    #   --Ob         BAM output path after ONT filtering.
-    #   --Hb         HiFi filtered BAM output path.
+    #  -h, --help          show this help message and exit
+    #  --Max_length        Extract longest reads
+    #  --Min_length        Extract shortest reads
+    #  --dir_ont           Directory containing ONT files
+    #  --dir_hifi          Directory containing HiFi files
+    #  -L , --lgsreads     Long-read sequencing data
+    #  -W , --wgs1         Path to WGS reads (read 1)
+    #  -w , --wgs2         Path to WGS reads (read 2)
+    #  -N , --NextPolish   Path to NextPolish tool
+    #  -t , --threads      Number of threads to use (default: 20)
+    # --polish            Perform polishing with NextPolish
 
-    $ telocomp_Filter_1 --genome genome.fasta \
-                        --fai genome.fasta.fai \
-                        --ont ont.fq.gz \
-                        --hifi hifi.fastq.gz \
-                        --threads 50 \
-                        --Ob ont_out.bam --Hb hifi_out.bam 
+    # Parameters of telocomp_Complement
+    # --dir_Max           Select the telomere reads obtained by polishing the longest reads to
+    #                     add to the genome
+    # --dir_Min           Select the telomere reads obtained by polishing the shortest reads
+    #                     to add to the genome
+    # -m , --motif        Telomeric repeats sequences, e.g., plant: CCCTAAA(TTTAGGG), animal:
+    #                     TTAGGG(CCCTAA), etc.
+    # -M , --motif_num    Input the number of bases of the telomere motif
+
+
+Longest read 
+------------
+
+In this step, the longest reads are directly extracted and the results are saved to the ``MaxLength_L`` and ``MaxLength_R`` directories. The sequences used for genome completion are obtained by merging the ``FASTA`` files from ``MaxLength_L`` and ``MaxLength_R`` into ``MaxLength_NP``.
+
+.. code:: bash
+
+    # No polishing
+    $ telocomp_maxmin --Max_length \
+                      --dir_ont algn_output_ont \
+                      --dir_hifi algn_output_hifi \
+
+
+    # Polishing
+    $ telocomp_maxmin --Max_length \
+                      --dir_ont algn_output_ont \
+                      --dir_hifi algn_output_hifi \
+                      -L HiFi.fastq.gz \
+                      -W WGS_f1.fq.gz \
+                      -w WGS_r2.fq.gz \
+                      --polish \
+                      -N /PATH/NextPolish -t 50 
 
 
 Shortest read 
 -------------
 
-The second step of the **Filter module** is designed to detect, extract, and process reads containing the predefined telomere motifs of interest, starting with the import of the BAM file.
+In this step, the longest reads are directly extracted and the results are saved to the ``MinLength_L`` and ``MinLength_R`` directories. The sequences used for genome completion are obtained by merging the ``FASTA`` files from `MinLength_L`` and ``MinLength_R`` into ``MinLength_NP``.
 
 .. code:: bash
 
-    # optional arguments:
-    #    -h, --help       show this help message and exit
-    #    --ont_bam        Input ONT BAM
-    #    --hifi_bam       Input HiFi BAM
-    #    -o, --out_dir    Output directory
-    #    -c, --coverage   The coverage parameter ranges from 0 to 100 and is used to trim reads
-    #                     according to the selected coverage level
-    #    -p, --parallels  Parameter for parallel processing of reads, with a default value of 5
-    #    --min_ratio      The proportion of the original genome sequence to the length of the
-    #                     reads, default=0.2
+    # No polishing
+    $ telocomp_maxmin --Min_length \
+                      --dir_ont algn_output_ont \
+                      --dir_hifi algn_output_hifi \
 
-    $ telocomp_Filter_2 --ont_bam ont_out.bam \
-                        --hifi_bam hifi_out.bam \
-                        -o output_dir/ \
-                        -c 100 -p 10 --min_ratio 0.2
 
-Complement part 
+    # Polishing
+    $ telocomp_maxmin --Min_length \
+                      --dir_ont algn_output_ont \
+                      --dir_hifi algn_output_hifi \
+                      -L HiFi.fastq.gz \
+                      -W WGS_f1.fq.gz \
+                      -w WGS_r2.fq.gz \
+                      --polish \
+                      -N /PATH/NextPolish -t 50 
+
+Complement part
 ---------------
 
+The **Complement part** operates on the longest and shortest reads extracted in the previous step, and integrates these reads into the corresponding positions of the genome.
 
+.. code:: bash
+
+    $ telocomp_Complement --dir_Max -G /PATH/test_sequence.fasta -m CCCTAAA -M 7
+
+    $ telocomp_Complement --dir_Min -G /PATH/test_sequence.fasta -m CCCTAAA -M 7 
 
 
 
