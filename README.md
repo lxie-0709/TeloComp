@@ -76,13 +76,14 @@ Note: TeloComp requires that you run the telomere complement command in the same
 
 #### Options_2:
       -h, --help       show this help message and exit
-      --ont_bam        ONT BAM
-      --hifi_bam       HiFi BAM
-      -o, --out_dir    Directory where both step1_2 and step1_3 should write their outputs
-      -c, --coverage   The coverage parameter ranges from 0 to 100 and is used to trim reads according to the selected                           coverage level.
-
-      -p, --parallels  Parameter for parallel processing of reads, with a default value of 4.
-      --min_ratio      The proportion of the original genome sequence to the length of the reads, default=0.2
+      --ont_bam        Input ONT BAM
+      --hifi_bam       Input HiFi BAM
+      -o, --out_dir    Output directory
+      -c, --coverage   The coverage parameter ranges from 0 to 100 and is used to trim reads
+                   according to the selected coverage level
+      -p, --parallels  Parameter for parallel processing of reads, with a default value of 5
+      --min_ratio      The proportion of the original genome sequence to the length of the
+                   reads, default=0.2
 
 #### Run:
 （1）Get the bam file containing the end software cutting sequence
