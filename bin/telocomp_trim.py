@@ -169,7 +169,7 @@ def main():
     p.add_argument("-o", "--out_dir",    required=True, help="Base output directory")
     p.add_argument("-c", "--coverage",   type=float, default=1.0,
                    help="Fraction of reads to keep (0<coverage≤1)")
-    p.add_argument("-t", "--threads",    type=int,   default=4, help="Parallel threads")
+    p.add_argument("-t", "--threads",    type=int,   default=5, help="Parallel threads")
     p.add_argument("-v", "--verbose",    action="store_true", help="Debug logging")
     args = p.parse_args()
 
