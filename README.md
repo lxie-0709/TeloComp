@@ -115,7 +115,6 @@ First, this step mainly detects and filters out reads containing telomeres outsi
       -W , --wgs1         Path to WGS reads (read 1)
       -w , --wgs2         Path to WGS reads (read 2)
       -N , --NextPolish   Path to NextPolish tool
-      --jar               Path to jar in Pilon
 
 
 
