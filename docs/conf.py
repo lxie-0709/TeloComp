@@ -48,7 +48,8 @@ exclude_patterns = []
 # HTML 输出配置
 # ----------------------------
 # 使用 Sphinx 默认主题
-html_theme = 'sphinx_rtd_theme'  # 你也可以用 'sphinx_rtd_theme'
+html_theme = 'sphinx_rtd_theme'  
 html_static_path = ['_static']
+
 
 
