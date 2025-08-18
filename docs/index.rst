@@ -6,6 +6,7 @@ Welcome to TeloComp's documentation!
 
 .. image:: ./images/TeloComp.png
 
+When using this software for telomere completion, the entire execution process should remain within the same working directory.
 
 Contents:
 ---------
@@ -22,6 +23,7 @@ Contents:
    content/Release_notes  
    content/Citation
    content/FAQ 
+
 
 
 
