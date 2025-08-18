@@ -86,7 +86,7 @@ Note: TeloComp requires that you run the telomere complement command in the same
 #### Run:
 （1）Get the bam file containing the end software cutting sequence
 
-    telocomp_Filter_1 --genome /PATH/genome.fasta --fai /PATH/genome.fasta.fai --ont /PATH/ont.fq.gz --hifi /PATH/hifi.fastq.gz --threads 50 --Ob /PATH/ont_out.bam --Hb /PATH/hifi_out.bam
+    telocomp_Filter_1 --genome /PATH/genome.fasta --fai /PATH/genome.fasta.fai --ont /PATH/ont.fastq.gz --hifi /PATH/hifi.fastq.gz --threads 50 --Ob /PATH/ont_out.bam --Hb /PATH/hifi_out.bam
 
 （2）Detection, extraction, and processing of reads.Start by importing the bam file（Here, run the test using this procedure.）：
     
