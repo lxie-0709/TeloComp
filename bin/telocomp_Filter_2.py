@@ -75,9 +75,9 @@ def main():
     parser.add_argument("-o","--out_dir", required=True, 
                         help="Directory where both step1_2 and step1_3 should write their outputs")
     parser.add_argument("-c","--coverage", type=float, default=100, 
-                        help="Coverage parameter for step1_3 (passed to -c)")
-    parser.add_argument("-p","--parallels",  type=int,   default=10,
-                        help="Parallels for step1_3 (passed to -p)")
+                        help="The coverage parameter ranges from 0 to 100 and is used to trim reads according to the selected coverage level")
+    parser.add_argument("-p","--parallels",  type=int,   default=5,
+                        help="Parameter for parallel processing of reads, with a default value of 5")
     parser.add_argument('--min_ratio', type=float, default=0.2, 
                         help="The proportion of the original genome sequence to the length of the reads, default=0.2")
     args = parser.parse_args()
