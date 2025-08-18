@@ -1,12 +1,12 @@
 Filter module
 =============
 
-The **Filter module** primarily performs the following tasks: extracting soft-clipped sequences, detecting telomere motifs, extracting reads containing the telomere motifs, and performing pre-assembly processing on the obtained reads. **TeloComp Filter_1** outputs `BAM` files containing soft-clipped sequences that extend beyond the chromosomal ends, for both ONT and HiFi reads. **TeloComp Filter_2** first identifies the main telomere sequence types, displaying the top 10 on the screen and saving the remaining types to a `TXT` file. After the user selects the desired telomere types, Filter2 extracts and outputs the corresponding reads in FASTA format, stored separately in the `ONT` and `HiFi` directories. Finally, the processed data are output to the `trim_L` and `trim_R` directories.
+The **Filter module** primarily performs the following tasks: extracting soft-clipped sequences, detecting telomere motifs, extracting reads containing the telomere motifs, and performing pre-assembly processing on the obtained reads. **TeloComp Filter_1** outputs ``BAM`` files containing soft-clipped sequences that extend beyond the chromosomal ends, for both ONT and HiFi reads. **TeloComp Filter_2** first identifies the main telomere sequence types, displaying the top 10 on the screen and saving the remaining types to a ``TXT`` file. After the user selects the desired telomere types, Filter2 extracts and outputs the corresponding reads in FASTA format, stored separately in the ``ONT`` and ``HiFi`` directories. Finally, the processed data are output to the ``trim_L`` and ``trim_R`` directories.
 
 TeloComp Filter_1
 -----------------
 
-The first step of `Filter module` is intended to extract soft-clipped sequences located beyond the chromosomal ends of the genome.
+The first step of **Filter module** is intended to extract soft-clipped sequences located beyond the chromosomal ends of the genome.
 
 .. code:: bash
 
@@ -34,7 +34,7 @@ The first step of `Filter module` is intended to extract soft-clipped sequences 
 TeloComp Filter_2
 -----------------
 
-The second step of the `Filter module` is designed to detect, extract, and process reads containing the predefined telomere motifs of interest, starting with the import of the BAM file.
+The second step of the **Filter module** is designed to detect, extract, and process reads containing the predefined telomere motifs of interest, starting with the import of the BAM file.
 
 .. code:: bash
 
