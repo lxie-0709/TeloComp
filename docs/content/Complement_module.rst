@@ -50,6 +50,7 @@ Telomere density plot at the left end
     :align: center
 
 Telomere density plot at the right end
+
 .. figure:: ../images/test_R_telomere.png
     :scale: 70 %
     :align: center
