@@ -79,8 +79,9 @@ Note: TeloComp requires that you run the telomere complement command in the same
       --ont_bam        ONT BAM
       --hifi_bam       HiFi BAM
       -o, --out_dir    Directory where both step1_2 and step1_3 should write their outputs
-      -c, --coverage   Coverage parameter for step1_3 (passed to -c)
-      -p, --parallels  Parallels for step1_3 (passed to -p)
+      -c, --coverage   The coverage parameter ranges from 0 to 100 and is used to trim reads according to the selected                           coverage level.
+
+      -p, --parallels  Parameter for parallel processing of reads, with a default value of 4.
       --min_ratio      The proportion of the original genome sequence to the length of the reads, default=0.2
 
 #### Run:
