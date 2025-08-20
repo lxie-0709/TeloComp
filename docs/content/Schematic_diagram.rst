@@ -5,7 +5,7 @@ This diagram illustrates TeloComp’s mechanism for read filtering and coverage 
 
 
 .. figure:: ../images/schematic.png
-    :scale: 8 %
+    :scale: 100 %
     :align: center
 
     Schematic diagram illustrating read sorting and coverage selection in TeloComp.
