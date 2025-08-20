@@ -3,8 +3,6 @@ Assembly Module
 
 The **Assembly module** primarily assembles the reads processed by the **Filter module**, and outputs the final assembly results to the ``Files_NP`` directory.
 
-Note: If reads at a chromosome end cannot be assembled, the shortest reads are selected to supplement and integrate into the reference genome.
-
 .. code:: bash
 
     # optional arguments:
@@ -42,3 +40,4 @@ Note: If reads at a chromosome end cannot be assembled, the shortest reads are s
                         -N /PATH/NextPolish \
                         -t 50 --assemble
 
+Note: If reads at a chromosome end cannot be assembled, TeloComp defaults to selecting the shortest reads to supplement the reference genome.
