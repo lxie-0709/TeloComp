@@ -25,6 +25,8 @@ Contents:
    content/Citation
    content/FAQ 
 
+.. tip:: Please open an issue on `GitHub <https://github.com/lxie-0709/TeloComp>`_ for feature requests or bug reports.
+
 
 
 
