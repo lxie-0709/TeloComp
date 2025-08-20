@@ -5,7 +5,7 @@ This diagram illustrates TeloComp’s mechanism for read filtering and coverage 
 
 
 .. figure:: ../images/schematic.png
-   :width: 100%       # 图片宽度自适应页面
+   :width: 600px       # 图片宽度自适应页面
    :align: center     # 可选，居中显示
 
 
