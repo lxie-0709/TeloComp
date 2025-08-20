@@ -39,7 +39,6 @@ Add NextPolish to your ``PATH`` (recommended):
 
 1.2 Other dependencies: They can be installed via conda, or downloaded and installed from their GitHub repositories, or installed automatically by running the ``install.sh`` script provided with TeloComp.
 
-
 2. Linux Installation
 ---------------------
 
