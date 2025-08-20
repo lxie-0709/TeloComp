@@ -15,6 +15,7 @@ Contents:
    :maxdepth: 2
 
    content/installation
+   content/Schematic_diagram
    content/Filter_module  
    content/Assembly_module
    content/Extract_module 
@@ -23,6 +24,7 @@ Contents:
    content/Release_notes  
    content/Citation
    content/FAQ 
+
 
 
 
