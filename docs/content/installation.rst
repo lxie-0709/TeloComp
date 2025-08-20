@@ -107,3 +107,5 @@ Check that all required tools are available:
 
 If the help message of each command is printed, the installation has been completed successfully.
 
+
+.. tip:: Please open an issue on `GitHub <https://github.com/lxie-0709/TeloComp>`_ for feature requests or bug reports.
