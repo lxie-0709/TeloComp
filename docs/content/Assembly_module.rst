@@ -40,5 +40,5 @@ The **Assembly module** primarily assembles the reads processed by the **Filter 
                         -N /PATH/NextPolish \
                         -t 50 --assemble
 
-Note: If reads at a chromosome end cannot be assembled, TeloComp defaults to selecting the shortest reads to supplement the reference genome.
+**Note:** If reads at a chromosome end cannot be assembled, TeloComp defaults to selecting the shortest reads to supplement the reference genome.
 
