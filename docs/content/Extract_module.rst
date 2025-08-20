@@ -1,8 +1,8 @@
 Extract Module 
 ==============
 
-Module for extracting the longest or shortest reads.
-----------------------------------------------------
+Assembly-free Module for Extracting the Longest or Shortest Telomeric Reads
+---------------------------------------------------------------------------
 
 The **Extract module** is designed for use cases where direct extraction is required without assembly. It extracts telomeric sequences located beyond the chromosomal ends and containing telomere motifs, and directly integrates the extracted sequences into the original genome.
 
@@ -31,8 +31,8 @@ The **Extract module** is designed for use cases where direct extraction is requ
     # -M , --motif_num    Input the number of bases of the telomere motif
 
 
-Longest read 
-------------
+Extracting the longest telomeric reads
+--------------------------------------
 
 In this step, the longest reads are directly extracted and the results are saved to the ``MaxLength_L`` and ``MaxLength_R`` directories. The sequences used for genome completion are obtained by merging the ``FASTA`` files from ``MaxLength_L`` and ``MaxLength_R`` into ``MaxLength_NP``.
 
@@ -55,10 +55,10 @@ In this step, the longest reads are directly extracted and the results are saved
                       -N /PATH/NextPolish -t 50 
 
 
-Shortest read 
--------------
+Extracting the shortest telomeric reads
+---------------------------------------
 
-In this step, the longest reads are directly extracted and the results are saved to the ``MinLength_L`` and ``MinLength_R`` directories. The sequences used for genome completion are obtained by merging the ``FASTA`` files from `MinLength_L`` and ``MinLength_R`` into ``MinLength_NP``.
+In this step, the shortest reads are directly extracted and the results are saved to the ``MinLength_L`` and ``MinLength_R`` directories. The sequences used for genome completion are obtained by merging the ``FASTA`` files from `MinLength_L`` and ``MinLength_R`` into ``MinLength_NP``.
 
 .. code:: bash
 
