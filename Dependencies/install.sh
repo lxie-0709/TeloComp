@@ -52,15 +52,13 @@ make
 make test
 #Add SVG-2.85 to your PATH
 echo "PERL5LIB=$current_path/SVG-2.85/lib:$PERL5LIB" >> ~/.bashrc
-##8.Install teloclip
-pip install teloclip==0.0.4
-##9.Racon: Installing racon with conda
+##8.Racon: Installing racon with conda
 conda install bioconda::racon
-##10.svglib
+##9.svglib
 pip install svglib=1.1.0
-##11.mummer
+##10.mummer
 conda install bioconda::mummer
-##12.perl-bioperl 
+##11.perl-bioperl 
 conda install perl-bioperl 
 
 
