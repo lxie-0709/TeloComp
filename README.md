@@ -262,7 +262,8 @@ Collinear alignment between the ***Morus*** ***notabilis*** original genome and 
 </div>
 
 
-
+# Full Documentation
+Please refer to our full [documentation](https://telocomp.readthedocs.io/en/latest/index.html) page.
 
 
 
