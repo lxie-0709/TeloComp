@@ -58,7 +58,7 @@ In this step, the longest reads are directly extracted and the results are saved
 Extracting the shortest telomeric reads
 ---------------------------------------
 
-In this step, the shortest reads are directly extracted and the results are saved to the ``MinLength_L`` and ``MinLength_R`` directories. The sequences used for genome completion are obtained by merging the ``FASTA`` files from `MinLength_L`` and ``MinLength_R`` into ``MinLength_NP``.
+In this step, the shortest reads are directly extracted and the results are saved to the ``MinLength_L`` and ``MinLength_R`` directories. The sequences used for genome completion are obtained by merging the ``FASTA`` files from ``MinLength_L`` and ``MinLength_R`` into ``MinLength_NP``.
 
 .. code:: bash
 
