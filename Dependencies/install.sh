@@ -55,7 +55,7 @@ echo "PERL5LIB=$current_path/SVG-2.85/lib:$PERL5LIB" >> ~/.bashrc
 ##8.Racon: Installing racon with conda
 #conda install bioconda::racon
 ##9.svglib
-pip install svglib=1.1.0
+pip install svglib==1.1.0
 ##10.mummer
 conda install bioconda::mummer
 ##11.perl-bioperl 
