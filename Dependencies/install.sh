@@ -39,7 +39,7 @@ python setup.py install
 ##6.NextPolish
 cd $current_path
 tar -zxvf NextPolish.tgz
-cd NextPolish &&make-j 10
+cd NextPolish &&make -j 10
 pip install paralleltask
 #Add NextPolish to your PATH
 echo "export PATH=\$PATH:$current_path/NextPolish" >> ~/.bashrc
