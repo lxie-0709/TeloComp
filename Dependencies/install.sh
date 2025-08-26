@@ -27,15 +27,6 @@ cd $current_path
 tar zxvf Flye-2.9.4.tar.gz
 cd Flye-2.9.4/
 python setup.py install
-##5.racon: Source Code Installation
-#cd $current_path
-#tar -zxvf racon-v1.4.3.tar.gz
-#cd racon-v1.4.3/
-#conda install cmake
-#cmake -DCMAKE_BUILD_TYPE=Release..
-#make&&make install
-##Add racon to your PATH
-#echo "export PATH=\$PATH:$current_path/racon-v1.4.3/bin" >> ~/.bashrc
 ##6.NextPolish
 cd $current_path
 tar -zxvf NextPolish.tgz
@@ -58,7 +49,6 @@ echo "PERL5LIB=$current_path/SVG-2.85/lib:$PERL5LIB" >> ~/.bashrc
 pip install svglib==1.1.0
 ##10.mummer
 conda install bioconda::mummer
-##11.perl-bioperl 
-conda install perl-bioperl 
+
 
 
