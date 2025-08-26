@@ -78,7 +78,7 @@ Set the execution permission and add the binaries to your system PATH:
 
 .. code:: bash
   
-    $ chmod -R 777 GenomeSyn-1.2.7
+    $ chmod +x GenomeSyn-1.2.7
     $ echo "export PATH=\$PATH:/yourPATH/GenomeSyn-1.2.7/bin" >> ~/.bashrc
     $ source ~/.bashrc
 
