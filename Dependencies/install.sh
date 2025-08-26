@@ -49,6 +49,8 @@ echo "PERL5LIB=$current_path/SVG-2.85/lib:$PERL5LIB" >> ~/.bashrc
 pip install svglib==1.1.0
 ##10.mummer
 conda install bioconda::mummer
+##Bio Perl
+conda install bioconda::perl-bioperl
 
 
 
