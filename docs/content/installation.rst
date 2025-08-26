@@ -11,16 +11,16 @@ Before installation, please make sure you are working within a Linux environment
 1. Dependency installation
 --------------------------
 
-* python >= 3.10
-* pysam >= 0.22.0
-* biopython >= 1.81
-* samtools >= 1.18
-* minimap2 >= 2.27
-* bwa >= 0.7.17
-* Flye >= 2.9.4
-* pilon >= 1.2.4
-* NextPolish >= 1.4.1
-* GenomeSyn >= 1.2.7
+* python = 3.11
+* pysam = 0.22.0
+* biopython = 1.81
+* samtools = 1.18
+* minimap2 = 2.27
+* bwa = 0.7.17
+* Flye = 2.9.4
+* pilon = 1.2.4
+* NextPolish = 1.4.1
+* GenomeSyn = 1.2.7
 
 1.1 NextPolish (recommended: install from source)
 
