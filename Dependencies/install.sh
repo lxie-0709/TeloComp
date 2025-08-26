@@ -50,6 +50,7 @@ pip install svglib==1.1.0
 ##10.mummer
 conda install bioconda::mummer
 ##Bio Perl
+conda config --set channel_priority flexible #帮助解决依赖冲突
 conda install bioconda::perl-bioperl
 
 
