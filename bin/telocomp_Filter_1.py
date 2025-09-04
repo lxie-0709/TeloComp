@@ -211,7 +211,7 @@ def run_pipeline(read_label, genome, read_file, preset, threads, contig_dict, mo
     """
 	For single read data:
 	1. Use minimap2 to align and output SAM file;
-	2. Use teloclip to process SAM file and output filtered SAM file;
+	2. Use TeloComp to process SAM file and output filtered SAM file;
 	3. Convert filtered SAM to BAM file.
     """
     # Create a temporary SAM file output by minimap2
@@ -231,7 +231,7 @@ def run_pipeline(read_label, genome, read_file, preset, threads, contig_dict, mo
         sys.stdout = out_filtered
         processSamlines(in_sam, contig_dict, motifList=motifs, maxBreak=max_break, minClip=min_clip)
         sys.stdout = original_stdout
-    logging.info(f"Teloclip filtering for {read_label} completed. Filtered SAM saved to {filtered_sam}")
+    logging.info(f"TeloComp filtering for {read_label} completed. Filtered SAM saved to {filtered_sam}")
 
     # SAM to BAM
     logging.info(f"Converting filtered SAM to BAM for {read_label}.")
@@ -256,7 +256,7 @@ def main():
             return ', '.join(action.option_strings)
 
     parser = argparse.ArgumentParser(
-        description="Pipeline: Align the genome FASTA and its FAI index with ONT/HiFi data, process the SAM file using teloclip, and output BAM files separately.",
+        description="Pipeline: Align the genome FASTA and its FAI index with ONT/HiFi data, process the SAM file using TeloComp, and output BAM files separately.",
         formatter_class=NoMetavarFormatter
     )
     parser.add_argument("--genome", required=True, help="Input genome FASTA file.")
