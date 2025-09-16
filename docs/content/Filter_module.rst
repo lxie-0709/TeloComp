@@ -54,6 +54,11 @@ The second step of the **Filter module** is designed to detect, extract, and pro
                         -o output_dir/ \
                         -c 100 -p 10 --min_ratio 0.2
 
+    # If the compute node is submitted or suspended, please use:      
+    $ echo "1" | telocomp_Filter_2 --ont_bam ont_out.bam \
+                        --hifi_bam hifi_out.bam \
+                        -o output_dir/ \
+                        -c 100 -p 10 --min_ratio 0.2
 
 
 
