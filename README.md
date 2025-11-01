@@ -1,4 +1,4 @@
-# TeloComp
+<img width="1410" height="506" alt="image" src="https://github.com/user-attachments/assets/1c611610-86a4-4a9b-a0f0-7ddefd18b920" /># TeloComp
 TeloComp is an efficient integrated software package for telomere extraction and complementation. It finalizes the output of the new genome and telomere complementation information and visualizes the complemented telomere portion through line graphs and covariance plots. It is more friendly to researchers and works towards a more complete T2T genome assembly.
 <div align="center">
 <img src="https://github.com/lxie-0709/TeloComp/blob/1.0.0/example/TeloComp.png" width="688px">
@@ -270,4 +270,6 @@ Please refer to our full [documentation](https://telocomp.readthedocs.io/en/late
 TeloComp utilizes code from the [Teloclip](https://github.com/Adamtaranto/teloclip) project, which is released under the [MIT License](https://opensource.org/licenses/MIT).
 We thank the author of Teloclip, Adam Taranto, for his foundational work.
 
+# Citating TeloComp
+Huang, S. B., Wu, J., Xu, Z. J., Mo, W. T., Yuan, S., Jiang, X. Y., Wang, H. F., & Xie, L. (2025). TeloComp: An efficient toolkit for accurate assembly of the telomeres in T2T genomes. Plant communications, 101492. Advance online publication. (https://doi.org/10.1016/j.xplc.2025.101492).
 
