@@ -266,6 +266,8 @@ Collinear alignment between the ***Morus*** ***notabilis*** original genome and 
 Please refer to our full [documentation](https://telocomp.readthedocs.io/en/latest/index.html) page.
 
 
-
+# About and Acknowledgements
+TeloComp utilizes code from the [Teloclip](https://github.com/Adamtaranto/teloclip) project, which is released under the [MIT License](https://opensource.org/licenses/MIT).
+We thank the author of Teloclip, Adam Taranto, for his foundational work.
 
 
