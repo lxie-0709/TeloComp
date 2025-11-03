@@ -105,17 +105,19 @@ def processSamlines(
             f"Discarded {removeCount} terminal alignments after filtering."
         )
 
-
 def splitCIGAR(SAM_CIGAR):
-	"""Split CIGAR string — Original from Teloclip."""
+    """
+    Split CIGAR string into list of tuples with format (len, operator)
+    """
     CIGARlist = []
     for x in re.findall("[0-9]*[A-Z|=]", SAM_CIGAR):
         CIGARlist.append((int(re.findall("[0-9]*", x)[0]), re.findall("[A-Z]|=", x)[0]))
     return CIGARlist
 
-    
 def checkClips(SAM_CIGAR):
-	"""Get lengths of soft-clipped blocks — Original from Teloclip."""
+    """
+    Get lengths of soft-clipped blocks from either end of an alignment given a CIGAR string.
+    """
     leftClipLen = None
     rightClipLen = None
     CIGARlist = splitCIGAR(SAM_CIGAR)
@@ -125,9 +127,10 @@ def checkClips(SAM_CIGAR):
         rightClipLen = int(CIGARlist[-1][0])
     return (leftClipLen, rightClipLen)
 
-
 def lenCIGAR(SAM_CIGAR):
-    """Calculate alignment length — Original from Teloclip."""
+    """
+    Calculate alignment length on reference as sum of M, D, N, X, = operators.
+    """
     alnLen = 0
     CIGARlist = splitCIGAR(SAM_CIGAR)
     for x in CIGARlist:
@@ -135,9 +138,8 @@ def lenCIGAR(SAM_CIGAR):
             alnLen += x[0]
     return alnLen
 
-
 def StreamingSamFilter(samfile=None, contigs=None, maxBreak=50, minClip=1):
-    """Generator version of loadSam() — Derived from Teloclip."""
+    """Rewrite loadSam() as generator."""
     SAM_QNAME = 0
     SAM_RNAME = 2
     SAM_POS = 3
@@ -166,9 +168,7 @@ def StreamingSamFilter(samfile=None, contigs=None, maxBreak=50, minClip=1):
                 if ((ContigLen - alnEnd) <= maxBreak) and (alnEnd + rightClipLen >= ContigLen + 1):
                     yield (samline[SAM_POS], alnEnd, rightClipLen, samline[SAM_SEQ], samline[SAM_QNAME], samline[SAM_RNAME], "R")
 
-
 def isMotifInClip(samline, motifList, leftClip, rightClip, leftClipLen, rightClipLen):
-    """Motif detection helper — Derived from Teloclip."""
     SAM_SEQ = 9
     leftcheck = False
     rightcheck = False
@@ -182,13 +182,15 @@ def isMotifInClip(samline, motifList, leftClip, rightClip, leftClipLen, rightCli
 # === Part 2: Utility helpers (from Teloclip) ===
 # =========================================================
 def read_fai(fai):
+    """
+    Read the FAI index file and return a dictionary with the key being the reference sequence name and the value     being the sequence length.
+    """
     ContigDict = dict()
     with open(fai, "r") as f:
         for line in f.readlines():
             li = line.strip().split()
             ContigDict[li[0]] = int(li[1])
     return ContigDict
-
 
 def crunchHomopolymers(motifList):
     crunchList = list()
@@ -202,7 +204,6 @@ def crunchHomopolymers(motifList):
         crunchList.append("".join(noReps))
     return list(set(crunchList))
 
-
 def check_sequence_for_patterns(dna_sequence, regex_patterns):
     return any(re.search(pattern, dna_sequence) for pattern in regex_patterns)
 
@@ -210,11 +211,12 @@ def check_sequence_for_patterns(dna_sequence, regex_patterns):
 # === Part 3: TleoComp custom pipeline and parallel execution ===
 # =========================================================
 # ------------------ Main process: parallel running of ONT/HiFi processes ------------------
+
 def run_pipeline(read_label, genome, read_file, preset, threads, contig_dict, motifs, max_break, min_clip, output_bam):
     """
 	For single read data:
 	1. Use minimap2 to align and output SAM file;
-	2. Use TeloComp to process SAM file and output filtered SAM file;
+	2. Use teloclip to process SAM file and output filtered SAM file;
 	3. Convert filtered SAM to BAM file.
     """
     # Create a temporary SAM file output by minimap2
@@ -234,7 +236,7 @@ def run_pipeline(read_label, genome, read_file, preset, threads, contig_dict, mo
         sys.stdout = out_filtered
         processSamlines(in_sam, contig_dict, motifList=motifs, maxBreak=max_break, minClip=min_clip)
         sys.stdout = original_stdout
-    logging.info(f"TeloComp filtering for {read_label} completed. Filtered SAM saved to {filtered_sam}")
+    logging.info(f"Teloclip filtering for {read_label} completed. Filtered SAM saved to {filtered_sam}")
 
     # SAM to BAM
     logging.info(f"Converting filtered SAM to BAM for {read_label}.")
@@ -259,7 +261,7 @@ def main():
             return ', '.join(action.option_strings)
 
     parser = argparse.ArgumentParser(
-        description="Pipeline: Align the genome FASTA and its FAI index with ONT/HiFi data, process the SAM file using TeloComp, and output BAM files separately.",
+        description="Pipeline: Align the genome FASTA and its FAI index with ONT/HiFi data, process the SAM file using teloclip, and output BAM files separately.",
         formatter_class=NoMetavarFormatter
     )
     parser.add_argument("--genome", required=True, help="Input genome FASTA file.")
