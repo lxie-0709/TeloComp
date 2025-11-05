@@ -1170,11 +1170,8 @@ def main():
     # Delete intermediate files
     tmp_getpos_dir = "tmp_getpos"
     tmp_sam_dir = "tmp_sam"
-#    shutil.rmtree(tmp_getpos_dir)
-#    shutil.rmtree(tmp_sam_dir)
-    for d in (tmp_getpos_dir, tmp_sam_dir):
-        if os.path.isdir(d):
-            shutil.rmtree(d)
+    shutil.rmtree(tmp_getpos_dir)
+    shutil.rmtree(tmp_sam_dir)
 
 
 if __name__ == "__main__":
