@@ -412,9 +412,9 @@ def run_GenomeSyn2(old_extr_genome, new_extr_genome, telo_1_bed_sorted, telo_2_b
         print(f"All result files have been moved to {output_dir}")
 
         if result.returncode != 0:
-            raise subprocess.CalledProcessError(result.returncode, GenomeSn1_command, result.stdout, result.stderr)
+            raise subprocess.CalledProcessError(result.returncode, GenomeSn2_command, result.stdout, result.stderr)
         else:
-            print(f"GenomeSn1_command executed successfully!")
+            print(f"GenomeSn2_command executed successfully!")
             print(result.stdout.decode())
     except subprocess.CalledProcessError as e:
         print(f"Error running {GenomeSn2_command}: {e}")
